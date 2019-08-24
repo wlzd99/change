@@ -1,0 +1,50 @@
+﻿@model change.getEdiNo_s
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>getEdiNo_s</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customsCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customsCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agentCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

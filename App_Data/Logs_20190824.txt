@@ -1,0 +1,104 @@
+2019-08-24 16:52:22,243 [10] ERROR ValuesController - {"ediNo":"EDI198000001488247"}
+2019-08-24 16:54:54,290 [12] ERROR ValuesController - {"ediNo":"EDI198000001488247"}
+2019-08-24 19:10:09,213 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: NEmQIhVp3tBAUccl3Yncba7pQ3UavuQnTy+B3LZFd1w1Y2Q0OWNiOC1lMDBiLTQ1
+
+
+2019-08-24 19:10:09,226 [5] INFO  ValuesController - 发送信息：：：{"data":"bNkHWXeRIbicy0+R3b1ZvUoctMcBaH2mObm5CX817t6EPGFaTBj9Z+nnMJ6spjSSKZiO01UP94+hAL0UJkvJGiLfpNo8lIDNK+ghyKiDxIgKqD7g4ALRsehHzT7/fjChtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKMvVrqcLA7Yu/xCI5FUuWo5"}
+2019-08-24 19:10:09,276 [5] INFO  ValuesController - 返回信息：：：{"flag":"F","errorCode":"105","errorInfo":"请求体解密失败","data":null}
+2019-08-24 19:11:36,850 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: 7V0O28VcXL17GFu1s5U6Qa85kq9ELnywF5w8t5XtSDE2NWM3MDIxMS04NDY0LTRm
+
+
+2019-08-24 19:11:36,850 [5] INFO  ValuesController - 发送信息：：：{"data":"bNkHWXeRIbicy0+R3b1ZvUoctMcBaH2mObm5CX817t6EPGFaTBj9Z+nnMJ6spjSSKZiO01UP94+hAL0UJkvJGiLfpNo8lIDNK+ghyKiDxIgKqD7g4ALRsehHzT7/fjChtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKMvVrqcLA7Yu/xCI5FUuWo5"}
+2019-08-24 19:11:36,875 [5] INFO  ValuesController - 返回信息：：：{"flag":"F","errorCode":"105","errorInfo":"请求体解密失败","data":null}
+2019-08-24 19:13:51,294 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: djhByDhAh0t6G23cRZR4wWCvgHItLv4LcvvoC4Z5jvtiNzk4ZmQ0NC1iYzdiLTRh
+
+
+2019-08-24 19:13:51,295 [5] INFO  ValuesController - 发送信息：：：{"data":"VXqRxpjgSk4jSUREuln3IS4rf4+koZIlBCZli/s1Jg+XIP98Q86hJmYNhTS7lQ10E1ivP/NLaMInxT9qGio09Ixw0WA5wedpUnhWGaty2jqO9x287c4JQyPrz5licmAtjSH1JzTFxs0zc9+XskNfgFCgljyvhrjhtYa/eryFC3GLqqtvKvrJRr3anVF6GrxCejVfFB53D/ropdJm6mPuFgqoPuDgAtGx6EfNPv9+MKG1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKO1TmUwia61GAmSaw5HpwCjtU5lMImutRgJkmsOR6cAo7VOZTCJrrUYCZJrDkenAKMvVrqcLA7Yu/xCI5FUuWo5"}
+2019-08-24 19:13:51,327 [5] INFO  ValuesController - 返回信息：：：{"flag":"F","errorCode":"105","errorInfo":"请求体解密失败","data":null}
+2019-08-24 19:21:01,967 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: NCnsYjyRYQxRA0kcJNebg7QIzlXbe63P+aS+T9uj911mYTM3MzNiNy0wNzU2LTRi
+
+
+2019-08-24 19:21:01,981 [5] INFO  ValuesController - 发送信息：：：{"data":"h0kvlJXOMOa9ACy7MNkGHq3uBoDygESg+1mg9KkRtj3brJ8BYzMraSVo3VJ8e4I7gtT3AV2mcw2XSA8hNxEBUfVW/gSPKlkSkVybPURAZEGbp/vp4PMnV75sps8yNZ7WD2oJJgkByA07Cl6Q2K/wGEKYEen/sCF6LtdEcRP6Fk2xopASJGzUEC8kJ6GGco9PEhL97OOF4TERI8EKk8lwU/G2yHoeljSoF6iawwt6wFE="}
+2019-08-24 19:21:02,063 [5] INFO  ValuesController - 返回信息：：：{"flag":"F","errorCode":"102","errorInfo":"验签失败","data":null}
+2019-08-24 19:24:59,566 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: A6zbyjWvc1fs4xJERScyZUDrEIF7h8JXumCI9RORGtIzMWI1MmIwYy0wMTJmLTRk
+
+
+2019-08-24 19:24:59,566 [5] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-24 19:24:59,589 [5] INFO  ValuesController - 返回信息：：：{"flag":"F","errorCode":"102","errorInfo":"验签失败","data":null}
+2019-08-24 19:27:15,666 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: SAW3yEx6mpYo/qEJKXpR4MN6qw7n34NdGkfdBhx5hHphMGVhN2Y2NC1iMGViLTRi
+
+
+2019-08-24 19:27:15,680 [6] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-24 19:27:16,110 [6] INFO  ValuesController - 返回信息：：：{"flag":"T","errorCode":"","errorInfo":"","data":"ADXVfsMgIfkbnbgOWFr2UpFAzB+qWdwWWOCJSQ857a8="}
+2019-08-24 19:29:52,218 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: x6jG3hEVAJSuFOUxhZwnmoXQgQzNEjlOxWz28yqo7Ew1OWUzMGM1Mi00OTQ1LTQy
+
+
+2019-08-24 19:29:52,232 [6] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-24 19:29:52,436 [6] INFO  ValuesController - 返回信息：：：{"flag":"T","errorCode":"","errorInfo":"","data":"ADXVfsMgIfkbnbgOWFr2UkuwoHTT8M+AKTYx+4FcwtM="}
+2019-08-24 19:30:03,930 [6] ERROR ValuesController - {"ediNo":"EDI198000001488248"}
+2019-08-24 19:35:01,709 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: OjwWfh4PL+RnszeQpStELHha3vhSQz0G8mlJlCf8ecU2YWNlZTI2Mi0yOTg0LTRk
+
+
+2019-08-24 19:35:01,723 [5] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-24 19:35:01,929 [5] INFO  ValuesController - 返回信息：：：{"flag":"T","errorCode":"","errorInfo":"","data":"ADXVfsMgIfkbnbgOWFr2UgNbrdZ5zzHh3wJ5DaD4nzg="}
+2019-08-24 19:35:21,558 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: mjsCWGnXSEfmw4HsE+yk1sn9P2m7YVdSToGCaPg96XIwOGU1NDBiOS01NDMwLTQ4
+
+
+2019-08-24 19:35:21,559 [5] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-24 19:35:21,780 [5] INFO  ValuesController - 返回信息：：：{"flag":"T","errorCode":"","errorInfo":"","data":"ADXVfsMgIfkbnbgOWFr2Uq0Z30IFfe/gJmoIiWTWijU="}
+2019-08-24 19:36:40,123 [5] ERROR ValuesController - {"ediNo":"EDI198000001488248"}
+2019-08-24 19:37:13,292 [5] ERROR ValuesController - {"ediNo":"EDI198000001488248"}

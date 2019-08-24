@@ -1,0 +1,87 @@
+﻿@model IEnumerable<change.nc_getEdiNo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TextBox1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtAdress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtPrivateKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtPublicKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtSender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtRecever)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtMiWen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtMingWen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TextBox1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtAdress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtPrivateKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtPublicKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtSender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtRecever)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtMiWen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.txtMingWen)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

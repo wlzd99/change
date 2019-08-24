@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<ul id="menu">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("nc_getEdiNo", "index", "nc_getEdiNo")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+</ul>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+    </div>
+
+    <form class="m-t" role="form" action="@Url.Action("Button1_Click")" method="post">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" ID="Button1" class="btn btn-primary block full-width m-b">测试</button>
+        <input type="text" name="TextBox1" class="form-control" placeholder="返回数据" size="100" TextMode="MultiLine">
+    </form>
+    <p>
+        <label>地址</label>
+        <input type="text" name="txtAdress" class="form-control" value="http://180.166.132.100/swgdsupplyspboot/api/getEdiNo" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <p>
+        <label>数据请求内容</label>
+        <input type="text" name="txtData" class="form-control" value="{&quot;customsCode&quot;:&quot;2212&quot;,&quot;agentCode&quot;:&quot;1108919038&quot;,&quot;entryType&quot;:&quot;8&quot;,&quot;userName&quot;:&quot;KSHJ&quot;}" Width="500" Height="20" TextMode="MultiLine">
+
+    </p>
+    <p>
+        <label>密码</label>
+        <input type="text" name="txtPassword" class="form-control" value="477eb52a114a408e8ab4552712c6c7b0" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <p>
+        <label>私钥</label>
+        <input type="text" name="txtPrivateKey" class="form-control" value="vxJlL/ltEFfIb1JC2PvqR4aVngnFYStK1IJKinxaADT+zWZFB/7VQvTe3JXldpXZL4WDz92SEaxyadC0I42Jlg==" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <p>
+        <label>公钥</label>
+        <input type="text" name="txtPublicKey" class="form-control" value="GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <p>
+        <label>发送方代码</label>
+        <input type="text" name="txtSender" class="form-control" value="KSHJ" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <p>
+        <label>接受方代码</label>
+        <input type="text" name="txtRecever" class="form-control" value="SWGD" Width="500" Height="20" TextMode="MultiLine">
+    </p>
+    <form class="m-t" role="form" action="@Url.Action("Test1.Button2_Click")" method="post">
+        <button type="submit" ID="Button2" class="btn btn-primary block full-width m-b">解码</button>
+        <input type="text" name="txtMiWen" class="form-control" placeholder="输入返回加密数据" size="100" TextMode="MultiLine">
+    </form>
+    <p>
+        <label>返回串明文</label>
+        <input type="text" name="txtMingWen" class="form-control" placeholder="返回明文数据" size="100" TextMode="MultiLine">
+    </p>
+</div>

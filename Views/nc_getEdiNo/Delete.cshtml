@@ -1,0 +1,104 @@
+﻿@model change.nc_getEdiNo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>nc_getEdiNo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TextBox1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextBox1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPrivateKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPrivateKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPublicKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPublicKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtSender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtSender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtRecever)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtRecever)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtMiWen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtMiWen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtMingWen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtMingWen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

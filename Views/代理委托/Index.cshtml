@@ -1,0 +1,219 @@
+﻿@model IEnumerable<change.代理委托>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.oid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ediNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.copCusCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codeTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.declTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.iEDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.listNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tradeMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.curr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.oriCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherNote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consignIcCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consignIcName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consignPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consignDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cusCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.decEntryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiveDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edocCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherRecInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.declarePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.promiseNote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.declIcCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.declIcName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.declTele)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payerCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tradeCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.agentCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.oid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ediNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.copCusCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.declTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.iEDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.listNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tradeMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.curr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.oriCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherNote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consignIcCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consignIcName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consignPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consignDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cusCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.decEntryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edocCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherRecInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.declarePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.promiseNote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.declIcCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.declIcName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.declTele)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payerCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tradeCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

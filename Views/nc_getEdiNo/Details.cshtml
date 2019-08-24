@@ -1,0 +1,98 @@
+﻿@model change.nc_getEdiNo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>nc_getEdiNo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TextBox1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextBox1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPrivateKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPrivateKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtPublicKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtPublicKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtSender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtSender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtRecever)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtRecever)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtMiWen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtMiWen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txtMingWen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txtMingWen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

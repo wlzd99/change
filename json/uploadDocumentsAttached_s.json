@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "preEntryId": "预录入编号",
+      "fileName": "随附单据名称",
+      "declName": "上传人员名称",
+      "signCert": "证书名称",
+      "formatType": "随附单据格式类型",
+      "signUnit": "签名单位代码",
+      "operFlag": "操作类型",
+      "edocOwnerCode": "回执文件名",
+      "opNote": "备注",
+      "customsCode": "关区",
+      "edocOwnerName": "企业名称",
+      "fileType": "随附单据类型",
+      "loginName": "海关账号",
+      "declType": "数据中心统一编号",
+      "declCode": "报关员号",
+      "declTime": "上传时间",
+      "entryId": "预录入编号",
+      "tradeCode": "经营单位代码",
+      "dataSource": "数据来源"
+    }
+  ]
+}

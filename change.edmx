@@ -5,6 +5,57 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="changeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.AREA_PRE”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="AREA_PRE">
+          <Property Name="TRADE_MODE" Type="nvarchar" MaxLength="4" />
+          <Property Name="DOCU_CODE" Type="nvarchar" MaxLength="1" />
+          <Property Name="DISTRICT_T" Type="nvarchar" MaxLength="1" />
+          <Property Name="USE_TO" Type="nvarchar" MaxLength="4" />
+          <Property Name="CODE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="GOODS_T1" Type="nvarchar" MaxLength="8" />
+          <Property Name="GOODS_T2" Type="nvarchar" MaxLength="8" />
+          <Property Name="GOODS_S1" Type="nvarchar" MaxLength="8" />
+          <Property Name="GOODS_S2" Type="nvarchar" MaxLength="8" />
+          <Property Name="DOCU_CO_MO" Type="nvarchar" MaxLength="1" />
+          <Property Name="NOTE_S" Type="nvarchar" MaxLength="40" />
+          <Property Name="TRADE_COUN" Type="nvarchar" MaxLength="4" />
+          <Property Name="ORIGIN_COU" Type="nvarchar" MaxLength="4" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.BODY_COND_ID”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="BODY_COND_ID">
+          <Property Name="COND_ID" Type="nvarchar" MaxLength="4" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.BODY_CONDID_GROUP”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="BODY_CONDID_GROUP">
+          <Property Name="COND_ID" Type="nvarchar" MaxLength="4" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CAR_HS”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CAR_HS">
+          <Property Name="TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="HS" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CAR_OTHER”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CAR_OTHER">
+          <Property Name="TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="CAR_CODE" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CHARACTERISTICCODE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CHARACTERISTICCODE">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="TYPE_CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="TYPE_CNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="TEU" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="CheckJsonData_r">
           <Key>
             <PropertyRef Name="id" />
@@ -15,6 +66,498 @@
           <Property Name="errorInfo" Type="nvarchar(max)" />
           <Property Name="data" Type="nvarchar(max)" />
         </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.ChinaRegionalism”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="ChinaRegionalism">
+          <Key>
+            <PropertyRef Name="ECIQ_UUID" />
+          </Key>
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="ITEMCODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="CLASSIFY_CODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="ECIQ_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CiqCode”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CiqCode">
+          <Property Name="ECIQ_UUID" Type="nvarchar" MaxLength="32" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="HS_CNAME" Type="nvarchar(max)" />
+          <Property Name="HS_CODE" Type="nvarchar" MaxLength="12" />
+          <Property Name="EXPAND_NO" Type="nvarchar" MaxLength="10" />
+          <Property Name="GOODS_NAME" Type="nvarchar(max)" />
+          <Property Name="CLASSIFY_CODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="CLASSIFY_CNNM" Type="nvarchar(max)" />
+          <Property Name="EXPORT_GOODS_CLASS" Type="nvarchar" MaxLength="10" />
+          <Property Name="IMPORT_GOODS_CLASS" Type="nvarchar" MaxLength="10" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="CIQ_CODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="SENIOR_CLASSIFY_CODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="POST_GOODS_FLAG" Type="nvarchar(max)" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CiqOrg”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CiqOrg">
+          <Property Name="CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="FULL_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABBR_NAME" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.classify”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="classify">
+          <Property Name="G_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="KEY_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CLASS_SPEC" Type="nvarchar" MaxLength="30" />
+          <Property Name="CODE_T" Type="nvarchar" MaxLength="8" />
+          <Property Name="CODE_S" Type="nvarchar" MaxLength="8" />
+          <Property Name="CLASS_NO" Type="nvarchar" MaxLength="5" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.Classify_New”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="Classify_New">
+          <Property Name="商品编码" Type="nvarchar" MaxLength="255" />
+          <Property Name="商品名称" Type="nvarchar" MaxLength="255" />
+          <Property Name="备注" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素1" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志1" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选1" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志1" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明1" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志1" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素2" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志2" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选2" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志2" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明2" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志2" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素3" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志3" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选3" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志3" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明3" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志3" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素4" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志4" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选4" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志4" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明4" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志4" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素5" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志5" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选5" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志5" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明5" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志5" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素6" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志6" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选6" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志6" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明6" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志6" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素7" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志7" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选7" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志7" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明7" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志7" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素8" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志8" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选8" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志8" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明8" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志8" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素9" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志9" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选9" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志9" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明9" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志9" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素10" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志10" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选10" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志10" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明10" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志10" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素11" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志11" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选11" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志11" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明11" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志11" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素12" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志12" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选12" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志12" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明12" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志12" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素13" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志13" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选13" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志13" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明13" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志13" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素14" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志14" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选14" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志14" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明14" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志14" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素15" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志15" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选15" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志15" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明15" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志15" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素16" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志16" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选16" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志16" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明16" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志16" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素17" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志17" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选17" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志17" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明17" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志17" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素18" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志18" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选18" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志18" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明18" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志18" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素19" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志19" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选19" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志19" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明19" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志19" Type="nvarchar" MaxLength="255" />
+          <Property Name="要素20" Type="nvarchar" MaxLength="255" />
+          <Property Name="标志20" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选20" Type="nvarchar" MaxLength="255" />
+          <Property Name="可选标志20" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明20" Type="nvarchar" MaxLength="255" />
+          <Property Name="说明标志20" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CO_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CO_TYPE">
+          <Key>
+            <PropertyRef Name="CO_OWNER" />
+            <PropertyRef Name="CO_OWNERSH" />
+          </Key>
+          <Property Name="CO_OWNER" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="CO_OWNERSH" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.complex”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="complex">
+          <Property Name="CODE_T" Type="nvarchar" MaxLength="8" />
+          <Property Name="CODE_S" Type="nvarchar" MaxLength="8" />
+          <Property Name="G_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="LOW_RATE" Type="float" />
+          <Property Name="HIGH_RATE" Type="float" />
+          <Property Name="OUT_RATE" Type="float" />
+          <Property Name="REG_MARK" Type="nvarchar" MaxLength="1" />
+          <Property Name="REG_RATE" Type="float" />
+          <Property Name="TAX_TYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="TAX_RATE" Type="float" />
+          <Property Name="COMM_RATE" Type="float" />
+          <Property Name="TAIWAN_RAT" Type="float" />
+          <Property Name="OTHER_TYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_RATE" Type="float" />
+          <Property Name="UNIT_1" Type="nvarchar" MaxLength="5" />
+          <Property Name="UNIT_2" Type="nvarchar" MaxLength="5" />
+          <Property Name="ILOW_PRICE" Type="float" />
+          <Property Name="IHIGH_PRIC" Type="float" />
+          <Property Name="ELOW_PRICE" Type="float" />
+          <Property Name="EHIGH_PRIC" Type="float" />
+          <Property Name="MAX_IN" Type="float" />
+          <Property Name="MAX_OUT" Type="float" />
+          <Property Name="CONTROL_MA" Type="nvarchar" MaxLength="10" />
+          <Property Name="CHK_PRICE" Type="nvarchar" MaxLength="1" />
+          <Property Name="TARIF_MARK" Type="nvarchar" MaxLength="4" />
+          <Property Name="NOTE_S" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.condition_check”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="condition_check">
+          <Property Name="SYSTEM_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SECURITY_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAINTAINANCE" Type="nvarchar" MaxLength="255" />
+          <Property Name="CATEGORY" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOTE" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.condition_check_string”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="condition_check_string">
+          <Property Name="SYSTEM_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SECURITY_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="STRING_NO" Type="int" />
+          <Property Name="STRING" Type="nvarchar(max)" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CONTA_MODEL”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CONTA_MODEL">
+          <Key>
+            <PropertyRef Name="CONTA_MODEL_CO" />
+          </Key>
+          <Property Name="CONTA_MODEL_CO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CONTA_MODEL_NAME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.ContainerModelStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="ContainerModelStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CorrelationReason”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CorrelationReason">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS1" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS2" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS3" Type="nvarchar" MaxLength="128" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.COUNTRY”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="COUNTRY">
+          <Key>
+            <PropertyRef Name="COUNTRY_CO" />
+            <PropertyRef Name="COUNTRY_NA" />
+          </Key>
+          <Property Name="COUNTRY_CO" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="COUNTRY_NA" Type="nvarchar" MaxLength="24" Nullable="false" />
+          <Property Name="COUNTRY_EN" Type="nvarchar" MaxLength="32" />
+          <Property Name="HIGH_LOW" Type="nvarchar" MaxLength="1" />
+          <Property Name="EXAM_MARK" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CountryStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CountryStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ENAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CTA_BODY_INF_REC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CTA_BODY_INF_REC">
+          <Property Name="cond_id" Type="nvarchar" MaxLength="4" />
+          <Property Name="t_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_id" Type="smallint" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="b_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="e_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="bull_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="contents_0" Type="nvarchar" MaxLength="20" />
+          <Property Name="contents_1" Type="nvarchar" MaxLength="20" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CTA_BODY_NAM_REC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CTA_BODY_NAM_REC">
+          <Property Name="item_code" Type="smallint" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CTA_HEAD_INF_REC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CTA_HEAD_INF_REC">
+          <Property Name="cond_id" Type="nvarchar" MaxLength="4" />
+          <Property Name="t_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_id" Type="smallint" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="b_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="e_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="bull_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="contents_0" Type="nvarchar" MaxLength="20" />
+          <Property Name="contents_1" Type="nvarchar" MaxLength="20" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CTA_HEAD_NAM_REC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CTA_HEAD_NAM_REC">
+          <Property Name="item_code" Type="smallint" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CTA_INF_NAM_REC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CTA_INF_NAM_REC">
+          <Property Name="cond_id" Type="nvarchar" MaxLength="4" />
+          <Property Name="t_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_id" Type="smallint" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="b_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="e_cut" Type="nvarchar" MaxLength="2" />
+          <Property Name="bull_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="contents_0" Type="nvarchar" MaxLength="20" />
+          <Property Name="contents_1" Type="nvarchar" MaxLength="20" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CTA_INF_REC”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CTA_INF_REC">
+          <Key>
+            <PropertyRef Name="cond_id" />
+            <PropertyRef Name="t_flag" />
+            <PropertyRef Name="item_id" />
+            <PropertyRef Name="b_cut" />
+            <PropertyRef Name="e_cut" />
+            <PropertyRef Name="bull_flag" />
+          </Key>
+          <Property Name="cond_id" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="t_flag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="item_id" Type="smallint" Nullable="false" />
+          <Property Name="b_cut" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="e_cut" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="bull_flag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="contents_0" Type="nvarchar" MaxLength="20" />
+          <Property Name="contents_1" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CTA_MES_REC”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CTA_MES_REC">
+          <Key>
+            <PropertyRef Name="mess_code" />
+            <PropertyRef Name="mess_level" />
+            <PropertyRef Name="mess" />
+          </Key>
+          <Property Name="mess_code" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="mess_level" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="mess" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CTA_NAM_REC”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CTA_NAM_REC">
+          <Key>
+            <PropertyRef Name="item_code" />
+            <PropertyRef Name="item_name" />
+            <PropertyRef Name="item_flag" />
+          </Key>
+          <Property Name="item_code" Type="smallint" Nullable="false" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="item_flag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CURR”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CURR">
+          <Key>
+            <PropertyRef Name="CURR_CODE" />
+            <PropertyRef Name="CURR_SYMB" />
+            <PropertyRef Name="CURR_NAME" />
+          </Key>
+          <Property Name="CURR_CODE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="CURR_SYMB" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="CURR_NAME" Type="nvarchar" MaxLength="24" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.CurrStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="CurrStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ENAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.CUSTOMS”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="CUSTOMS">
+          <Key>
+            <PropertyRef Name="CUSTOMS_CO" />
+            <PropertyRef Name="CUSTOMS_NA" />
+          </Key>
+          <Property Name="CUSTOMS_CO" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="CUSTOMS_FU" Type="nvarchar" MaxLength="255" />
+          <Property Name="CUSTOMS_NA" Type="nvarchar" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.DangPackSpec”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DangPackSpec">
+          <Property Name="CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="FULL_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABBR_NAME" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.DangPackType”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DangPackType">
+          <Property Name="CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="FULL_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABBR_NAME" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.DB_Seed”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DB_Seed">
+          <Property Name="SeedVer" Type="nvarchar" MaxLength="20" />
+          <Property Name="Seed" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.DeclarationMaterialCode”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DeclarationMaterialCode">
+          <Property Name="ITEMCODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ITEMNAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="EXP_IMP_FLAG" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.DISTRICT”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="DISTRICT">
+          <Key>
+            <PropertyRef Name="DISTRICT_C" />
+            <PropertyRef Name="DISTRICT_N" />
+          </Key>
+          <Property Name="DISTRICT_C" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="DISTRICT_N" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DISTRICT_T" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.DomesticPort”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="DomesticPort">
+          <Property Name="CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
         <EntityType Name="downloadDocumentsAttachedByCheck_r">
           <Key>
             <PropertyRef Name="id" />
@@ -56,6 +599,67 @@
           <Property Name="icCode" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.Edoc_Code”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="Edoc_Code">
+          <Property Name="Edoc_Code" Type="nvarchar" MaxLength="8" />
+          <Property Name="Edoc_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Edoc_Type" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.EPCompare”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="EPCompare">
+          <Property Name="FieldId" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_TableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_Ctrl_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.EPCompare_wd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="EPCompare_wd">
+          <Property Name="FieldId" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_TableCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_TableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.EPCompare_wd_swgd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="EPCompare_wd_swgd">
+          <Property Name="FieldId" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="QP_FieldName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_TableCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_TableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EP_FieldCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.EXCHSOUR”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="EXCHSOUR">
+          <Key>
+            <PropertyRef Name="EX_SOURCE" />
+            <PropertyRef Name="ABBR_SOURC" />
+            <PropertyRef Name="FULL_SOURC" />
+          </Key>
+          <Property Name="EX_SOURCE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="ABBR_SOURC" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="FULL_SOURC" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.Fee_Mark”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="Fee_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="getDocumentsAttachedReplyInfo_r">
           <Key>
             <PropertyRef Name="id" />
@@ -93,6 +697,37 @@
           <Property Name="entryType" Type="nchar" MaxLength="2" Nullable="false" />
           <Property Name="userName" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.GoodsAttr”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="GoodsAttr">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS1" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS2" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS3" Type="nvarchar" MaxLength="128" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.HEAD_COND_ID”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="HEAD_COND_ID">
+          <Property Name="COND_ID" Type="nvarchar" MaxLength="4" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.HEAD_CONDID_GROUP”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="HEAD_CONDID_GROUP">
+          <Property Name="COND_ID" Type="nvarchar" MaxLength="4" />
+        </EntityType>-->
         <EntityType Name="Httppost_s">
           <Key>
             <PropertyRef Name="id" />
@@ -100,6 +735,136 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="msgType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="data" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.hzzs_Company”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="hzzs_Company">
+          <Property Name="Company_Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="Summary_Tax" Type="nvarchar" MaxLength="1" />
+          <Property Name="Independent_Tax" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.hzzs_Custom”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="hzzs_Custom">
+          <Property Name="Custom_Co" Type="nvarchar" MaxLength="4" />
+          <Property Name="Custom_Name" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.ICCardLimit”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="ICCardLimit">
+          <Property Name="CUSTOMS_CODE" Type="nvarchar" MaxLength="4" />
+          <Property Name="CUSTOMS_TYPE" Type="nvarchar" MaxLength="4" />
+          <Property Name="MEMO1" Type="nvarchar" MaxLength="255" />
+          <Property Name="MEMO2" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.IMPORT_SURTAXES”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="IMPORT_SURTAXES">
+          <Property Name="CODE_TS" Type="nvarchar" MaxLength="10" />
+          <Property Name="COUNTRY_CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="COMPANY_NAME_CN" Type="nvarchar" MaxLength="255" />
+          <Property Name="COMPANY_NAME_EN" Type="nvarchar" MaxLength="255" />
+          <Property Name="TAX_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ANTI_RATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="BEGIN_DATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="END_DATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOTE_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="G_MODEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROMISE_PRICSE" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROMISE_PRICE_CURR" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROMISE_PRICE_UNIT" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACTION_NO" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.Insur_Mark”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="Insur_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.IOFCertBill”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="IOFCertBill">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS1" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS2" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS3" Type="nvarchar" MaxLength="128" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="50" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.LC_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="LC_TYPE">
+          <Key>
+            <PropertyRef Name="PAY_WAY" />
+            <PropertyRef Name="PAY_NAME" />
+          </Key>
+          <Property Name="PAY_WAY" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="PAY_NAME" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.LEVYMODE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="LEVYMODE">
+          <Key>
+            <PropertyRef Name="DUTY_MODE" />
+            <PropertyRef Name="DUTY_SPEC" />
+          </Key>
+          <Property Name="DUTY_MODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="DUTY_SPEC" Type="nvarchar" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.LEVYTYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="LEVYTYPE">
+          <Key>
+            <PropertyRef Name="CUT_MODE" />
+            <PropertyRef Name="ABBR_CUT" />
+            <PropertyRef Name="FULL_CUT" />
+          </Key>
+          <Property Name="CUT_MODE" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="ABBR_CUT" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="FULL_CUT" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.LICENSED”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="LICENSED">
+          <Key>
+            <PropertyRef Name="DOCU_CODE" />
+          </Key>
+          <Property Name="DOCU_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="DOCU_NAME" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.LICENSEN”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="LICENSEN">
+          <Property Name="CODE_T" Type="nvarchar" MaxLength="8" />
+          <Property Name="CODE_S" Type="nvarchar" MaxLength="8" />
+          <Property Name="IE_MARK" Type="nvarchar" MaxLength="1" />
+          <Property Name="IE_NOTE" Type="nvarchar" MaxLength="80" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.Mapping”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="Mapping">
+          <Key>
+            <PropertyRef Name="ObjectID" />
+          </Key>
+          <Property Name="ObjectID" Type="int" Nullable="false" />
+          <Property Name="entablename" Type="nvarchar" MaxLength="50" />
+          <Property Name="chtablename" Type="nvarchar" MaxLength="50" />
+          <Property Name="encolmnname" Type="nvarchar" MaxLength="50" />
+          <Property Name="chcolmnname" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="nc_getEdiNo">
           <Key>
@@ -116,6 +881,86 @@
           <Property Name="txtRecever" Type="nchar" MaxLength="100" />
           <Property Name="txtMiWen" Type="nchar" MaxLength="100" />
           <Property Name="txtMingWen" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.Other_Mark”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="Other_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.PAY_MODE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="PAY_MODE">
+          <Key>
+            <PropertyRef Name="PAY_CODE" />
+            <PropertyRef Name="PAY_NAME" />
+          </Key>
+          <Property Name="PAY_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="PAY_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.PORT”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="PORT">
+          <Key>
+            <PropertyRef Name="PORT_CODE" />
+            <PropertyRef Name="PORT_NAME" />
+          </Key>
+          <Property Name="PORT_CODE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="PORT_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.PortStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="PortStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="ENAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.ProductPermissionType”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="ProductPermissionType">
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="ITEMCODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="ITEMNAME" Type="nvarchar" MaxLength="200" />
+          <Property Name="MNGTNONAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="ENFORCELEVELCODE" Type="nvarchar" MaxLength="64" />
+          <Property Name="ENFORCELEVELNAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="CERTTYPECODE" Type="nvarchar" MaxLength="64" />
+          <Property Name="CERTTYPENAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="PARENTCODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="LEAFFLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="QUALIF_TYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="EXP_IMP_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.qty_1_range”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="qty_1_range">
+          <Property Name="code_ts" Type="nvarchar" MaxLength="255" />
+          <Property Name="qty_1_range" Type="nvarchar" MaxLength="255" />
+          <Property Name="tips" Type="nvarchar" MaxLength="255" />
+          <Property Name="refuse" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.QUATA”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="QUATA">
+          <Key>
+            <PropertyRef Name="COUNTRY_CO" />
+          </Key>
+          <Property Name="COUNTRY_CO" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="CODE_T" Type="nvarchar" MaxLength="8" />
+          <Property Name="CODE_S" Type="nvarchar" MaxLength="8" />
         </EntityType>
         <!--生成过程中发现错误:
 警告 6002: 表/视图“change.dbo.queryFormResult_r”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
@@ -206,6 +1051,168 @@
           <Property Name="T_DEC_GOODS_LIMIT" Type="nvarchar(max)" />
           <Property Name="T_DEC_GOODS_LIMIT_VIN" Type="nvarchar(max)" />
         </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.SH_REPLYERROR”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="SH_REPLYERROR">
+          <Key>
+            <PropertyRef Name="ERR_CODE" />
+            <PropertyRef Name="ERR_MESS" />
+          </Key>
+          <Property Name="ERR_CODE" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="ERR_LEVEL" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERR_MESS" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.SH_REPLYFASTERR”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="SH_REPLYFASTERR">
+          <Property Name="MESS_CODE" Type="nvarchar" MaxLength="4" />
+          <Property Name="LEVEL" Type="nvarchar" MaxLength="1" />
+          <Property Name="MESS" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.SpecDecl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="SpecDecl">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS1" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS2" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS3" Type="nvarchar" MaxLength="128" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.SPECIALC”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="SPECIALC">
+          <Property Name="CODE_T" Type="nvarchar" MaxLength="8" />
+          <Property Name="CODE_S" Type="nvarchar" MaxLength="8" />
+          <Property Name="TRADE_CO" Type="nvarchar" MaxLength="10" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TableInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TableInfo">
+          <Key>
+            <PropertyRef Name="objectID" />
+          </Key>
+          <Property Name="objectID" Type="int" Nullable="false" />
+          <Property Name="entablename" Type="nvarchar" MaxLength="50" />
+          <Property Name="chtablename" Type="nvarchar" MaxLength="50" />
+          <Property Name="encolmnname" Type="nvarchar" MaxLength="50" />
+          <Property Name="chcolmnname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TAXTYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TAXTYPE">
+          <Key>
+            <PropertyRef Name="TAX_CODE" />
+            <PropertyRef Name="TAX_SPEC" />
+          </Key>
+          <Property Name="TAX_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="TAX_SPEC" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TRADE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRADE">
+          <Key>
+            <PropertyRef Name="TRADE_MODE" />
+            <PropertyRef Name="ABBR_TRADE" />
+            <PropertyRef Name="FULL_TRADE" />
+          </Key>
+          <Property Name="TRADE_MODE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="ABBR_TRADE" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="FULL_TRADE" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.TRADE_MO”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TRADE_MO">
+          <Property Name="TRADE_MODE" Type="nvarchar" MaxLength="5" />
+          <Property Name="DISTRICT_T" Type="nvarchar" MaxLength="1" />
+          <Property Name="BASIC_IM" Type="nvarchar" MaxLength="1" />
+          <Property Name="BASIC_EX" Type="nvarchar" MaxLength="1" />
+          <Property Name="IM_CONTROL" Type="nvarchar" MaxLength="24" />
+          <Property Name="EX_CONTROL" Type="nvarchar" MaxLength="24" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.TradeModeStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TradeModeStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.TrafModeStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TrafModeStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TRANS_FLAG”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRANS_FLAG">
+          <Key>
+            <PropertyRef Name="TRANS_FLAG_CO" />
+            <PropertyRef Name="TRANS_FLAG_NAME" />
+          </Key>
+          <Property Name="TRANS_FLAG_CO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TRANS_FLAG_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TRANSAC”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRANSAC">
+          <Key>
+            <PropertyRef Name="TRANS_MODE" />
+            <PropertyRef Name="TRANS_SPEC" />
+          </Key>
+          <Property Name="TRANS_MODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="TRANS_SPEC" Type="nvarchar" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.TRANSF”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRANSF">
+          <Key>
+            <PropertyRef Name="TRAF_CODE" />
+            <PropertyRef Name="TRAF_SPEC" />
+          </Key>
+          <Property Name="TRAF_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="TRAF_SPEC" Type="nvarchar" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.UNIT”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="UNIT">
+          <Key>
+            <PropertyRef Name="UNIT_CODE" />
+            <PropertyRef Name="UNIT_NAME" />
+          </Key>
+          <Property Name="UNIT_CODE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="UNIT_NAME" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CONV_CODE" Type="nvarchar" MaxLength="5" />
+          <Property Name="CONV_RATIO" Type="float" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.UnitStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="UnitStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
         <EntityType Name="uploadDocumentsAttached_r">
           <Key>
             <PropertyRef Name="id" />
@@ -266,6 +1273,99 @@
           <Property Name="signunit" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="datas" Type="varbinary(max)" Nullable="false" />
         </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.USE_TO”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="USE_TO">
+          <Property Name="USE_TO_COD" Type="nvarchar" MaxLength="5" />
+          <Property Name="USE_TO_NAM" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.UsePurpose”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="UsePurpose">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="CNAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS1" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS2" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS3" Type="nvarchar" MaxLength="128" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="ALIAS4" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS5" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS6" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS7" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS8" Type="nvarchar" MaxLength="128" />
+          <Property Name="ALIAS9" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.USER_TO”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="USER_TO">
+          <Key>
+            <PropertyRef Name="USE_TO_COD" />
+            <PropertyRef Name="USE_TO_NAM" />
+          </Key>
+          <Property Name="USE_TO_COD" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="USE_TO_NAM" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.WorldFirstDistrict”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="WorldFirstDistrict">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="INDEXID" Type="nvarchar" MaxLength="32" />
+          <Property Name="ITEMCODE" Type="nvarchar" MaxLength="24" />
+          <Property Name="ISO2" Type="nvarchar" MaxLength="10" />
+          <Property Name="ISO3" Type="nvarchar" MaxLength="10" />
+          <Property Name="ITEMNAME" Type="nvarchar" MaxLength="200" />
+          <Property Name="ENAME" Type="nvarchar" MaxLength="128" />
+          <Property Name="STATE" Type="nvarchar" MaxLength="3" />
+          <Property Name="CIQ" Type="nvarchar" MaxLength="3" />
+          <Property Name="OLDCODE" Type="nvarchar" MaxLength="100" />
+          <Property Name="OLDCNAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="PARENTCODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTUPDATE" Type="datetime" />
+          <Property Name="LEAFFLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="10" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="OTHER_FLAG" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“change.dbo.WRAP_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="WRAP_TYPE">
+          <Key>
+            <PropertyRef Name="WRAP_CODE" />
+            <PropertyRef Name="WRAP_NAME" />
+          </Key>
+          <Property Name="WRAP_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="WRAP_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.WrapTypeStd”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="WrapTypeStd">
+          <Property Name="CODESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMESTD" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CODECIQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAMECIQ" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“change.dbo.YLQX_check”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="YLQX_check">
+          <Property Name="HS" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
         <EntityType Name="报关单表体">
           <Key>
             <PropertyRef Name="id" />
@@ -981,6 +2081,231 @@
           <EntitySet Name="许可证信息" EntityType="Self.许可证信息" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="原产地补充申报" EntityType="Self.原产地补充申报" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="原产地证明项号关联关系" EntityType="Self.原产地证明项号关联关系" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHARACTERISTICCODE" EntityType="Self.CHARACTERISTICCODE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CHARACTERISTICCODE].[CODE] AS [CODE], 
+    [CHARACTERISTICCODE].[CNAME] AS [CNAME], 
+    [CHARACTERISTICCODE].[TYPE_CODE] AS [TYPE_CODE], 
+    [CHARACTERISTICCODE].[TYPE_CNAME] AS [TYPE_CNAME], 
+    [CHARACTERISTICCODE].[TEU] AS [TEU]
+    FROM [dbo].[CHARACTERISTICCODE] AS [CHARACTERISTICCODE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChinaRegionalism" EntityType="Self.ChinaRegionalism" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChinaRegionalism].[INDEXID] AS [INDEXID], 
+    [ChinaRegionalism].[ITEMCODE] AS [ITEMCODE], 
+    [ChinaRegionalism].[CNAME] AS [CNAME], 
+    [ChinaRegionalism].[ENAME] AS [ENAME], 
+    [ChinaRegionalism].[CLASSIFY_CODE] AS [CLASSIFY_CODE], 
+    [ChinaRegionalism].[FLAG] AS [FLAG], 
+    [ChinaRegionalism].[LASTUPDATE] AS [LASTUPDATE], 
+    [ChinaRegionalism].[VERSION] AS [VERSION], 
+    [ChinaRegionalism].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [ChinaRegionalism].[ECIQ_UUID] AS [ECIQ_UUID], 
+    [ChinaRegionalism].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[ChinaRegionalism] AS [ChinaRegionalism]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CO_TYPE" EntityType="Self.CO_TYPE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CO_TYPE].[CO_OWNER] AS [CO_OWNER], 
+    [CO_TYPE].[CO_OWNERSH] AS [CO_OWNERSH]
+    FROM [dbo].[CO_TYPE] AS [CO_TYPE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CONTA_MODEL" EntityType="Self.CONTA_MODEL" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CONTA_MODEL].[CONTA_MODEL_CO] AS [CONTA_MODEL_CO], 
+    [CONTA_MODEL].[CONTA_MODEL_NAME] AS [CONTA_MODEL_NAME]
+    FROM [dbo].[CONTA_MODEL] AS [CONTA_MODEL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CorrelationReason" EntityType="Self.CorrelationReason" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CorrelationReason].[CCM_UUID] AS [CCM_UUID], 
+    [CorrelationReason].[INDEXID] AS [INDEXID], 
+    [CorrelationReason].[CODE] AS [CODE], 
+    [CorrelationReason].[CNAME] AS [CNAME], 
+    [CorrelationReason].[ENAME] AS [ENAME], 
+    [CorrelationReason].[SEQ_NO] AS [SEQ_NO], 
+    [CorrelationReason].[ALIAS1] AS [ALIAS1], 
+    [CorrelationReason].[ALIAS2] AS [ALIAS2], 
+    [CorrelationReason].[ALIAS3] AS [ALIAS3], 
+    [CorrelationReason].[FLAG] AS [FLAG], 
+    [CorrelationReason].[LASTUPDATE] AS [LASTUPDATE], 
+    [CorrelationReason].[VERSION] AS [VERSION], 
+    [CorrelationReason].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [CorrelationReason].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[CorrelationReason] AS [CorrelationReason]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="COUNTRY" EntityType="Self.COUNTRY" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [COUNTRY].[COUNTRY_CO] AS [COUNTRY_CO], 
+    [COUNTRY].[COUNTRY_NA] AS [COUNTRY_NA], 
+    [COUNTRY].[COUNTRY_EN] AS [COUNTRY_EN], 
+    [COUNTRY].[HIGH_LOW] AS [HIGH_LOW], 
+    [COUNTRY].[EXAM_MARK] AS [EXAM_MARK]
+    FROM [dbo].[COUNTRY] AS [COUNTRY]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CTA_INF_REC" EntityType="Self.CTA_INF_REC" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CTA_INF_REC].[cond_id] AS [cond_id], 
+    [CTA_INF_REC].[t_flag] AS [t_flag], 
+    [CTA_INF_REC].[item_id] AS [item_id], 
+    [CTA_INF_REC].[b_cut] AS [b_cut], 
+    [CTA_INF_REC].[e_cut] AS [e_cut], 
+    [CTA_INF_REC].[bull_flag] AS [bull_flag], 
+    [CTA_INF_REC].[contents_0] AS [contents_0], 
+    [CTA_INF_REC].[contents_1] AS [contents_1]
+    FROM [dbo].[CTA_INF_REC] AS [CTA_INF_REC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CTA_MES_REC" EntityType="Self.CTA_MES_REC" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CTA_MES_REC].[mess_code] AS [mess_code], 
+    [CTA_MES_REC].[mess_level] AS [mess_level], 
+    [CTA_MES_REC].[mess] AS [mess]
+    FROM [dbo].[CTA_MES_REC] AS [CTA_MES_REC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CTA_NAM_REC" EntityType="Self.CTA_NAM_REC" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CTA_NAM_REC].[item_code] AS [item_code], 
+    [CTA_NAM_REC].[item_name] AS [item_name], 
+    [CTA_NAM_REC].[item_flag] AS [item_flag], 
+    [CTA_NAM_REC].[item_type] AS [item_type]
+    FROM [dbo].[CTA_NAM_REC] AS [CTA_NAM_REC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CURR" EntityType="Self.CURR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CURR].[CURR_CODE] AS [CURR_CODE], 
+    [CURR].[CURR_SYMB] AS [CURR_SYMB], 
+    [CURR].[CURR_NAME] AS [CURR_NAME]
+    FROM [dbo].[CURR] AS [CURR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CUSTOMS" EntityType="Self.CUSTOMS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CUSTOMS].[CUSTOMS_CO] AS [CUSTOMS_CO], 
+    [CUSTOMS].[CUSTOMS_FU] AS [CUSTOMS_FU], 
+    [CUSTOMS].[CUSTOMS_NA] AS [CUSTOMS_NA]
+    FROM [dbo].[CUSTOMS] AS [CUSTOMS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DISTRICT].[DISTRICT_C] AS [DISTRICT_C], 
+    [DISTRICT].[DISTRICT_N] AS [DISTRICT_N], 
+    [DISTRICT].[DISTRICT_T] AS [DISTRICT_T]
+    FROM [dbo].[DISTRICT] AS [DISTRICT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EXCHSOUR" EntityType="Self.EXCHSOUR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EXCHSOUR].[EX_SOURCE] AS [EX_SOURCE], 
+    [EXCHSOUR].[ABBR_SOURC] AS [ABBR_SOURC], 
+    [EXCHSOUR].[FULL_SOURC] AS [FULL_SOURC]
+    FROM [dbo].[EXCHSOUR] AS [EXCHSOUR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Fee_Mark" EntityType="Self.Fee_Mark" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Fee_Mark].[Code] AS [Code], 
+    [Fee_Mark].[Name] AS [Name]
+    FROM [dbo].[Fee_Mark] AS [Fee_Mark]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="GoodsAttr" EntityType="Self.GoodsAttr" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [GoodsAttr].[CCM_UUID] AS [CCM_UUID], 
+    [GoodsAttr].[INDEXID] AS [INDEXID], 
+    [GoodsAttr].[CODE] AS [CODE], 
+    [GoodsAttr].[CNAME] AS [CNAME], 
+    [GoodsAttr].[ENAME] AS [ENAME], 
+    [GoodsAttr].[SEQ_NO] AS [SEQ_NO], 
+    [GoodsAttr].[ALIAS1] AS [ALIAS1], 
+    [GoodsAttr].[ALIAS2] AS [ALIAS2], 
+    [GoodsAttr].[ALIAS3] AS [ALIAS3], 
+    [GoodsAttr].[FLAG] AS [FLAG], 
+    [GoodsAttr].[LASTUPDATE] AS [LASTUPDATE], 
+    [GoodsAttr].[VERSION] AS [VERSION], 
+    [GoodsAttr].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [GoodsAttr].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[GoodsAttr] AS [GoodsAttr]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Insur_Mark" EntityType="Self.Insur_Mark" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Insur_Mark].[Code] AS [Code], 
+    [Insur_Mark].[Name] AS [Name]
+    FROM [dbo].[Insur_Mark] AS [Insur_Mark]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IOFCertBill" EntityType="Self.IOFCertBill" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [IOFCertBill].[CCM_UUID] AS [CCM_UUID], 
+    [IOFCertBill].[INDEXID] AS [INDEXID], 
+    [IOFCertBill].[CODE] AS [CODE], 
+    [IOFCertBill].[CNAME] AS [CNAME], 
+    [IOFCertBill].[ENAME] AS [ENAME], 
+    [IOFCertBill].[SEQ_NO] AS [SEQ_NO], 
+    [IOFCertBill].[ALIAS1] AS [ALIAS1], 
+    [IOFCertBill].[ALIAS2] AS [ALIAS2], 
+    [IOFCertBill].[ALIAS3] AS [ALIAS3], 
+    [IOFCertBill].[FLAG] AS [FLAG], 
+    [IOFCertBill].[LASTUPDATE] AS [LASTUPDATE], 
+    [IOFCertBill].[VERSION] AS [VERSION], 
+    [IOFCertBill].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [IOFCertBill].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[IOFCertBill] AS [IOFCertBill]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LC_TYPE" EntityType="Self.LC_TYPE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LC_TYPE].[PAY_WAY] AS [PAY_WAY], 
+    [LC_TYPE].[PAY_NAME] AS [PAY_NAME]
+    FROM [dbo].[LC_TYPE] AS [LC_TYPE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LEVYMODE" EntityType="Self.LEVYMODE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LEVYMODE].[DUTY_MODE] AS [DUTY_MODE], 
+    [LEVYMODE].[DUTY_SPEC] AS [DUTY_SPEC]
+    FROM [dbo].[LEVYMODE] AS [LEVYMODE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LEVYTYPE" EntityType="Self.LEVYTYPE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LEVYTYPE].[CUT_MODE] AS [CUT_MODE], 
+    [LEVYTYPE].[ABBR_CUT] AS [ABBR_CUT], 
+    [LEVYTYPE].[FULL_CUT] AS [FULL_CUT]
+    FROM [dbo].[LEVYTYPE] AS [LEVYTYPE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LICENSED" EntityType="Self.LICENSED" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LICENSED].[DOCU_CODE] AS [DOCU_CODE], 
+    [LICENSED].[DOCU_NAME] AS [DOCU_NAME]
+    FROM [dbo].[LICENSED] AS [LICENSED]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Mapping" EntityType="Self.Mapping" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Mapping].[ObjectID] AS [ObjectID], 
+    [Mapping].[entablename] AS [entablename], 
+    [Mapping].[chtablename] AS [chtablename], 
+    [Mapping].[encolmnname] AS [encolmnname], 
+    [Mapping].[chcolmnname] AS [chcolmnname]
+    FROM [dbo].[Mapping] AS [Mapping]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Other_Mark" EntityType="Self.Other_Mark" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Other_Mark].[Code] AS [Code], 
+    [Other_Mark].[Name] AS [Name]
+    FROM [dbo].[Other_Mark] AS [Other_Mark]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PAY_MODE" EntityType="Self.PAY_MODE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PAY_MODE].[PAY_CODE] AS [PAY_CODE], 
+    [PAY_MODE].[PAY_NAME] AS [PAY_NAME]
+    FROM [dbo].[PAY_MODE] AS [PAY_MODE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PORT" EntityType="Self.PORT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PORT].[PORT_CODE] AS [PORT_CODE], 
+    [PORT].[PORT_NAME] AS [PORT_NAME]
+    FROM [dbo].[PORT] AS [PORT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="QUATA" EntityType="Self.QUATA" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [QUATA].[COUNTRY_CO] AS [COUNTRY_CO], 
+    [QUATA].[CODE_T] AS [CODE_T], 
+    [QUATA].[CODE_S] AS [CODE_S]
+    FROM [dbo].[QUATA] AS [QUATA]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="queryFormResult_r" EntityType="Self.queryFormResult_r" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [queryFormResult_r].[id] AS [id], 
@@ -997,6 +2322,137 @@
     [sendAgent_r].[errorCode] AS [errorCode], 
     [sendAgent_r].[errorInfo] AS [errorInfo]
     FROM [dbo].[sendAgent_r] AS [sendAgent_r]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SH_REPLYERROR" EntityType="Self.SH_REPLYERROR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SH_REPLYERROR].[ERR_CODE] AS [ERR_CODE], 
+    [SH_REPLYERROR].[ERR_LEVEL] AS [ERR_LEVEL], 
+    [SH_REPLYERROR].[ERR_MESS] AS [ERR_MESS]
+    FROM [dbo].[SH_REPLYERROR] AS [SH_REPLYERROR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SpecDecl" EntityType="Self.SpecDecl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SpecDecl].[CCM_UUID] AS [CCM_UUID], 
+    [SpecDecl].[INDEXID] AS [INDEXID], 
+    [SpecDecl].[CODE] AS [CODE], 
+    [SpecDecl].[CNAME] AS [CNAME], 
+    [SpecDecl].[ENAME] AS [ENAME], 
+    [SpecDecl].[SEQ_NO] AS [SEQ_NO], 
+    [SpecDecl].[ALIAS1] AS [ALIAS1], 
+    [SpecDecl].[ALIAS2] AS [ALIAS2], 
+    [SpecDecl].[ALIAS3] AS [ALIAS3], 
+    [SpecDecl].[FLAG] AS [FLAG], 
+    [SpecDecl].[LASTUPDATE] AS [LASTUPDATE], 
+    [SpecDecl].[VERSION] AS [VERSION], 
+    [SpecDecl].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [SpecDecl].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[SpecDecl] AS [SpecDecl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TableInfo" EntityType="Self.TableInfo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TableInfo].[objectID] AS [objectID], 
+    [TableInfo].[entablename] AS [entablename], 
+    [TableInfo].[chtablename] AS [chtablename], 
+    [TableInfo].[encolmnname] AS [encolmnname], 
+    [TableInfo].[chcolmnname] AS [chcolmnname]
+    FROM [dbo].[TableInfo] AS [TableInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TAXTYPE" EntityType="Self.TAXTYPE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TAXTYPE].[TAX_CODE] AS [TAX_CODE], 
+    [TAXTYPE].[TAX_SPEC] AS [TAX_SPEC]
+    FROM [dbo].[TAXTYPE] AS [TAXTYPE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TRADE" EntityType="Self.TRADE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TRADE].[TRADE_MODE] AS [TRADE_MODE], 
+    [TRADE].[ABBR_TRADE] AS [ABBR_TRADE], 
+    [TRADE].[FULL_TRADE] AS [FULL_TRADE]
+    FROM [dbo].[TRADE] AS [TRADE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TRANS_FLAG" EntityType="Self.TRANS_FLAG" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TRANS_FLAG].[TRANS_FLAG_CO] AS [TRANS_FLAG_CO], 
+    [TRANS_FLAG].[TRANS_FLAG_NAME] AS [TRANS_FLAG_NAME]
+    FROM [dbo].[TRANS_FLAG] AS [TRANS_FLAG]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TRANSAC" EntityType="Self.TRANSAC" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TRANSAC].[TRANS_MODE] AS [TRANS_MODE], 
+    [TRANSAC].[TRANS_SPEC] AS [TRANS_SPEC]
+    FROM [dbo].[TRANSAC] AS [TRANSAC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TRANSF" EntityType="Self.TRANSF" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TRANSF].[TRAF_CODE] AS [TRAF_CODE], 
+    [TRANSF].[TRAF_SPEC] AS [TRAF_SPEC]
+    FROM [dbo].[TRANSF] AS [TRANSF]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UNIT" EntityType="Self.UNIT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UNIT].[UNIT_CODE] AS [UNIT_CODE], 
+    [UNIT].[UNIT_NAME] AS [UNIT_NAME], 
+    [UNIT].[CONV_CODE] AS [CONV_CODE], 
+    [UNIT].[CONV_RATIO] AS [CONV_RATIO]
+    FROM [dbo].[UNIT] AS [UNIT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UsePurpose" EntityType="Self.UsePurpose" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UsePurpose].[CCM_UUID] AS [CCM_UUID], 
+    [UsePurpose].[INDEXID] AS [INDEXID], 
+    [UsePurpose].[CODE] AS [CODE], 
+    [UsePurpose].[CNAME] AS [CNAME], 
+    [UsePurpose].[ENAME] AS [ENAME], 
+    [UsePurpose].[SEQ_NO] AS [SEQ_NO], 
+    [UsePurpose].[ALIAS1] AS [ALIAS1], 
+    [UsePurpose].[ALIAS2] AS [ALIAS2], 
+    [UsePurpose].[ALIAS3] AS [ALIAS3], 
+    [UsePurpose].[FLAG] AS [FLAG], 
+    [UsePurpose].[LASTUPDATE] AS [LASTUPDATE], 
+    [UsePurpose].[VERSION] AS [VERSION], 
+    [UsePurpose].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [UsePurpose].[OTHER_FLAG] AS [OTHER_FLAG], 
+    [UsePurpose].[ALIAS4] AS [ALIAS4], 
+    [UsePurpose].[ALIAS5] AS [ALIAS5], 
+    [UsePurpose].[ALIAS6] AS [ALIAS6], 
+    [UsePurpose].[ALIAS7] AS [ALIAS7], 
+    [UsePurpose].[ALIAS8] AS [ALIAS8], 
+    [UsePurpose].[ALIAS9] AS [ALIAS9]
+    FROM [dbo].[UsePurpose] AS [UsePurpose]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="USER_TO" EntityType="Self.USER_TO" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [USER_TO].[USE_TO_COD] AS [USE_TO_COD], 
+    [USER_TO].[USE_TO_NAM] AS [USE_TO_NAM]
+    FROM [dbo].[USER_TO] AS [USER_TO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorldFirstDistrict" EntityType="Self.WorldFirstDistrict" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WorldFirstDistrict].[CCM_UUID] AS [CCM_UUID], 
+    [WorldFirstDistrict].[INDEXID] AS [INDEXID], 
+    [WorldFirstDistrict].[ITEMCODE] AS [ITEMCODE], 
+    [WorldFirstDistrict].[ISO2] AS [ISO2], 
+    [WorldFirstDistrict].[ISO3] AS [ISO3], 
+    [WorldFirstDistrict].[ITEMNAME] AS [ITEMNAME], 
+    [WorldFirstDistrict].[ENAME] AS [ENAME], 
+    [WorldFirstDistrict].[STATE] AS [STATE], 
+    [WorldFirstDistrict].[CIQ] AS [CIQ], 
+    [WorldFirstDistrict].[OLDCODE] AS [OLDCODE], 
+    [WorldFirstDistrict].[OLDCNAME] AS [OLDCNAME], 
+    [WorldFirstDistrict].[PARENTCODE] AS [PARENTCODE], 
+    [WorldFirstDistrict].[FLAG] AS [FLAG], 
+    [WorldFirstDistrict].[LASTUPDATE] AS [LASTUPDATE], 
+    [WorldFirstDistrict].[LEAFFLAG] AS [LEAFFLAG], 
+    [WorldFirstDistrict].[VERSION] AS [VERSION], 
+    [WorldFirstDistrict].[FMK_ARCHIVE_FLAG] AS [FMK_ARCHIVE_FLAG], 
+    [WorldFirstDistrict].[OTHER_FLAG] AS [OTHER_FLAG]
+    FROM [dbo].[WorldFirstDistrict] AS [WorldFirstDistrict]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WRAP_TYPE" EntityType="Self.WRAP_TYPE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WRAP_TYPE].[WRAP_CODE] AS [WRAP_CODE], 
+    [WRAP_TYPE].[WRAP_NAME] AS [WRAP_NAME]
+    FROM [dbo].[WRAP_TYPE] AS [WRAP_TYPE]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="报关单随附单证" EntityType="Self.报关单随附单证" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1969,6 +3425,45 @@
           <EntitySet Name="sendAgent_r" EntityType="Self.sendAgent_r" />
           <EntitySet Name="报关单随附单证" EntityType="Self.报关单随附单证" />
           <EntitySet Name="nc_getEdiNo" EntityType="changeModel.nc_getEdiNo" />
+          <EntitySet Name="CHARACTERISTICCODE" EntityType="changeModel.CHARACTERISTICCODE" />
+          <EntitySet Name="ChinaRegionalism" EntityType="changeModel.ChinaRegionalism" />
+          <EntitySet Name="CO_TYPE" EntityType="changeModel.CO_TYPE" />
+          <EntitySet Name="CONTA_MODEL" EntityType="changeModel.CONTA_MODEL" />
+          <EntitySet Name="CorrelationReason" EntityType="changeModel.CorrelationReason" />
+          <EntitySet Name="COUNTRY" EntityType="changeModel.COUNTRY" />
+          <EntitySet Name="CTA_INF_REC" EntityType="changeModel.CTA_INF_REC" />
+          <EntitySet Name="CTA_MES_REC" EntityType="changeModel.CTA_MES_REC" />
+          <EntitySet Name="CTA_NAM_REC" EntityType="changeModel.CTA_NAM_REC" />
+          <EntitySet Name="CURR" EntityType="changeModel.CURR" />
+          <EntitySet Name="CUSTOMS" EntityType="changeModel.CUSTOMS" />
+          <EntitySet Name="DISTRICT" EntityType="changeModel.DISTRICT" />
+          <EntitySet Name="EXCHSOUR" EntityType="changeModel.EXCHSOUR" />
+          <EntitySet Name="Fee_Mark" EntityType="changeModel.Fee_Mark" />
+          <EntitySet Name="GoodsAttr" EntityType="changeModel.GoodsAttr" />
+          <EntitySet Name="Insur_Mark" EntityType="changeModel.Insur_Mark" />
+          <EntitySet Name="IOFCertBill" EntityType="changeModel.IOFCertBill" />
+          <EntitySet Name="LC_TYPE" EntityType="changeModel.LC_TYPE" />
+          <EntitySet Name="LEVYMODE" EntityType="changeModel.LEVYMODE" />
+          <EntitySet Name="LEVYTYPE" EntityType="changeModel.LEVYTYPE" />
+          <EntitySet Name="LICENSED" EntityType="changeModel.LICENSED" />
+          <EntitySet Name="Mapping" EntityType="changeModel.Mapping" />
+          <EntitySet Name="Other_Mark" EntityType="changeModel.Other_Mark" />
+          <EntitySet Name="PAY_MODE" EntityType="changeModel.PAY_MODE" />
+          <EntitySet Name="PORT" EntityType="changeModel.PORT" />
+          <EntitySet Name="QUATA" EntityType="changeModel.QUATA" />
+          <EntitySet Name="SH_REPLYERROR" EntityType="changeModel.SH_REPLYERROR" />
+          <EntitySet Name="SpecDecl" EntityType="changeModel.SpecDecl" />
+          <EntitySet Name="TableInfo" EntityType="changeModel.TableInfo" />
+          <EntitySet Name="TAXTYPE" EntityType="changeModel.TAXTYPE" />
+          <EntitySet Name="TRADE" EntityType="changeModel.TRADE" />
+          <EntitySet Name="TRANS_FLAG" EntityType="changeModel.TRANS_FLAG" />
+          <EntitySet Name="TRANSAC" EntityType="changeModel.TRANSAC" />
+          <EntitySet Name="TRANSF" EntityType="changeModel.TRANSF" />
+          <EntitySet Name="UNIT" EntityType="changeModel.UNIT" />
+          <EntitySet Name="UsePurpose" EntityType="changeModel.UsePurpose" />
+          <EntitySet Name="USER_TO" EntityType="changeModel.USER_TO" />
+          <EntitySet Name="WorldFirstDistrict" EntityType="changeModel.WorldFirstDistrict" />
+          <EntitySet Name="WRAP_TYPE" EntityType="changeModel.WRAP_TYPE" />
         </EntityContainer>
         <EntityType Name="nc_getEdiNo">
           <Key>
@@ -1985,6 +3480,434 @@
           <Property Name="txtRecever" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="txtMiWen" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="txtMingWen" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CHARACTERISTICCODE">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE_CNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TEU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ChinaRegionalism">
+          <Key>
+            <PropertyRef Name="ECIQ_UUID" />
+          </Key>
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="ITEMCODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CLASSIFY_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ECIQ_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CO_TYPE">
+          <Key>
+            <PropertyRef Name="CO_OWNER" />
+            <PropertyRef Name="CO_OWNERSH" />
+          </Key>
+          <Property Name="CO_OWNER" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CO_OWNERSH" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CONTA_MODEL">
+          <Key>
+            <PropertyRef Name="CONTA_MODEL_CO" />
+          </Key>
+          <Property Name="CONTA_MODEL_CO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CONTA_MODEL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CorrelationReason">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SEQ_NO" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="COUNTRY">
+          <Key>
+            <PropertyRef Name="COUNTRY_CO" />
+            <PropertyRef Name="COUNTRY_NA" />
+          </Key>
+          <Property Name="COUNTRY_CO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="COUNTRY_NA" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="COUNTRY_EN" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="HIGH_LOW" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="EXAM_MARK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CTA_INF_REC">
+          <Key>
+            <PropertyRef Name="cond_id" />
+            <PropertyRef Name="t_flag" />
+            <PropertyRef Name="item_id" />
+            <PropertyRef Name="b_cut" />
+            <PropertyRef Name="e_cut" />
+            <PropertyRef Name="bull_flag" />
+          </Key>
+          <Property Name="cond_id" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="t_flag" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="item_id" Type="Int16" Nullable="false" />
+          <Property Name="b_cut" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="e_cut" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="bull_flag" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="contents_0" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="contents_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CTA_MES_REC">
+          <Key>
+            <PropertyRef Name="mess_code" />
+            <PropertyRef Name="mess_level" />
+            <PropertyRef Name="mess" />
+          </Key>
+          <Property Name="mess_code" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="mess_level" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="mess" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CTA_NAM_REC">
+          <Key>
+            <PropertyRef Name="item_code" />
+            <PropertyRef Name="item_name" />
+            <PropertyRef Name="item_flag" />
+          </Key>
+          <Property Name="item_code" Type="Int16" Nullable="false" />
+          <Property Name="item_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="item_flag" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="item_type" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CURR">
+          <Key>
+            <PropertyRef Name="CURR_CODE" />
+            <PropertyRef Name="CURR_SYMB" />
+            <PropertyRef Name="CURR_NAME" />
+          </Key>
+          <Property Name="CURR_CODE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CURR_SYMB" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="CURR_NAME" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CUSTOMS">
+          <Key>
+            <PropertyRef Name="CUSTOMS_CO" />
+            <PropertyRef Name="CUSTOMS_NA" />
+          </Key>
+          <Property Name="CUSTOMS_CO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CUSTOMS_FU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CUSTOMS_NA" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DISTRICT">
+          <Key>
+            <PropertyRef Name="DISTRICT_C" />
+            <PropertyRef Name="DISTRICT_N" />
+          </Key>
+          <Property Name="DISTRICT_C" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="DISTRICT_N" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DISTRICT_T" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EXCHSOUR">
+          <Key>
+            <PropertyRef Name="EX_SOURCE" />
+            <PropertyRef Name="ABBR_SOURC" />
+            <PropertyRef Name="FULL_SOURC" />
+          </Key>
+          <Property Name="EX_SOURCE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ABBR_SOURC" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="FULL_SOURC" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Fee_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GoodsAttr">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SEQ_NO" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Insur_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="IOFCertBill">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SEQ_NO" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_TYPE">
+          <Key>
+            <PropertyRef Name="PAY_WAY" />
+            <PropertyRef Name="PAY_NAME" />
+          </Key>
+          <Property Name="PAY_WAY" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PAY_NAME" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LEVYMODE">
+          <Key>
+            <PropertyRef Name="DUTY_MODE" />
+            <PropertyRef Name="DUTY_SPEC" />
+          </Key>
+          <Property Name="DUTY_MODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DUTY_SPEC" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LEVYTYPE">
+          <Key>
+            <PropertyRef Name="CUT_MODE" />
+            <PropertyRef Name="ABBR_CUT" />
+            <PropertyRef Name="FULL_CUT" />
+          </Key>
+          <Property Name="CUT_MODE" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ABBR_CUT" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="FULL_CUT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LICENSED">
+          <Key>
+            <PropertyRef Name="DOCU_CODE" />
+          </Key>
+          <Property Name="DOCU_CODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DOCU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Mapping">
+          <Key>
+            <PropertyRef Name="ObjectID" />
+          </Key>
+          <Property Name="ObjectID" Type="Int32" Nullable="false" />
+          <Property Name="entablename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chtablename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="encolmnname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chcolmnname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Other_Mark">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PAY_MODE">
+          <Key>
+            <PropertyRef Name="PAY_CODE" />
+            <PropertyRef Name="PAY_NAME" />
+          </Key>
+          <Property Name="PAY_CODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PAY_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PORT">
+          <Key>
+            <PropertyRef Name="PORT_CODE" />
+            <PropertyRef Name="PORT_NAME" />
+          </Key>
+          <Property Name="PORT_CODE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PORT_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="QUATA">
+          <Key>
+            <PropertyRef Name="COUNTRY_CO" />
+          </Key>
+          <Property Name="COUNTRY_CO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CODE_T" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="CODE_S" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SH_REPLYERROR">
+          <Key>
+            <PropertyRef Name="ERR_CODE" />
+            <PropertyRef Name="ERR_MESS" />
+          </Key>
+          <Property Name="ERR_CODE" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ERR_LEVEL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERR_MESS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SpecDecl">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SEQ_NO" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TableInfo">
+          <Key>
+            <PropertyRef Name="objectID" />
+          </Key>
+          <Property Name="objectID" Type="Int32" Nullable="false" />
+          <Property Name="entablename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chtablename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="encolmnname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chcolmnname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TAXTYPE">
+          <Key>
+            <PropertyRef Name="TAX_CODE" />
+            <PropertyRef Name="TAX_SPEC" />
+          </Key>
+          <Property Name="TAX_CODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TAX_SPEC" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRADE">
+          <Key>
+            <PropertyRef Name="TRADE_MODE" />
+            <PropertyRef Name="ABBR_TRADE" />
+            <PropertyRef Name="FULL_TRADE" />
+          </Key>
+          <Property Name="TRADE_MODE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ABBR_TRADE" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="FULL_TRADE" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRANS_FLAG">
+          <Key>
+            <PropertyRef Name="TRANS_FLAG_CO" />
+            <PropertyRef Name="TRANS_FLAG_NAME" />
+          </Key>
+          <Property Name="TRANS_FLAG_CO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TRANS_FLAG_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRANSAC">
+          <Key>
+            <PropertyRef Name="TRANS_MODE" />
+            <PropertyRef Name="TRANS_SPEC" />
+          </Key>
+          <Property Name="TRANS_MODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TRANS_SPEC" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRANSF">
+          <Key>
+            <PropertyRef Name="TRAF_CODE" />
+            <PropertyRef Name="TRAF_SPEC" />
+          </Key>
+          <Property Name="TRAF_CODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TRAF_SPEC" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UNIT">
+          <Key>
+            <PropertyRef Name="UNIT_CODE" />
+            <PropertyRef Name="UNIT_NAME" />
+          </Key>
+          <Property Name="UNIT_CODE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_NAME" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CONV_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CONV_RATIO" Type="Double" />
+        </EntityType>
+        <EntityType Name="UsePurpose">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CNAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SEQ_NO" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS1" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS2" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS3" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS4" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS5" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS6" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS7" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS8" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS9" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USER_TO">
+          <Key>
+            <PropertyRef Name="USE_TO_COD" />
+            <PropertyRef Name="USE_TO_NAM" />
+          </Key>
+          <Property Name="USE_TO_COD" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="USE_TO_NAM" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WorldFirstDistrict">
+          <Key>
+            <PropertyRef Name="CCM_UUID" />
+          </Key>
+          <Property Name="CCM_UUID" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="INDEXID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="ITEMCODE" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="ISO2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ISO3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ITEMNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ENAME" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CIQ" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="OLDCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OLDCNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PARENTCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="LEAFFLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="VERSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FMK_ARCHIVE_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OTHER_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WRAP_TYPE">
+          <Key>
+            <PropertyRef Name="WRAP_CODE" />
+            <PropertyRef Name="WRAP_NAME" />
+          </Key>
+          <Property Name="WRAP_CODE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="WRAP_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2956,6 +4879,440 @@
                 <ScalarProperty Name="txtAdress" ColumnName="txtAdress" />
                 <ScalarProperty Name="TextBox1" ColumnName="TextBox1" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHARACTERISTICCODE">
+            <EntityTypeMapping TypeName="changeModel.CHARACTERISTICCODE">
+              <MappingFragment StoreEntitySet="CHARACTERISTICCODE">
+                <ScalarProperty Name="TEU" ColumnName="TEU" />
+                <ScalarProperty Name="TYPE_CNAME" ColumnName="TYPE_CNAME" />
+                <ScalarProperty Name="TYPE_CODE" ColumnName="TYPE_CODE" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChinaRegionalism">
+            <EntityTypeMapping TypeName="changeModel.ChinaRegionalism">
+              <MappingFragment StoreEntitySet="ChinaRegionalism">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="ECIQ_UUID" ColumnName="ECIQ_UUID" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="CLASSIFY_CODE" ColumnName="CLASSIFY_CODE" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CO_TYPE">
+            <EntityTypeMapping TypeName="changeModel.CO_TYPE">
+              <MappingFragment StoreEntitySet="CO_TYPE">
+                <ScalarProperty Name="CO_OWNERSH" ColumnName="CO_OWNERSH" />
+                <ScalarProperty Name="CO_OWNER" ColumnName="CO_OWNER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONTA_MODEL">
+            <EntityTypeMapping TypeName="changeModel.CONTA_MODEL">
+              <MappingFragment StoreEntitySet="CONTA_MODEL">
+                <ScalarProperty Name="CONTA_MODEL_NAME" ColumnName="CONTA_MODEL_NAME" />
+                <ScalarProperty Name="CONTA_MODEL_CO" ColumnName="CONTA_MODEL_CO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CorrelationReason">
+            <EntityTypeMapping TypeName="changeModel.CorrelationReason">
+              <MappingFragment StoreEntitySet="CorrelationReason">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ALIAS3" ColumnName="ALIAS3" />
+                <ScalarProperty Name="ALIAS2" ColumnName="ALIAS2" />
+                <ScalarProperty Name="ALIAS1" ColumnName="ALIAS1" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COUNTRY">
+            <EntityTypeMapping TypeName="changeModel.COUNTRY">
+              <MappingFragment StoreEntitySet="COUNTRY">
+                <ScalarProperty Name="EXAM_MARK" ColumnName="EXAM_MARK" />
+                <ScalarProperty Name="HIGH_LOW" ColumnName="HIGH_LOW" />
+                <ScalarProperty Name="COUNTRY_EN" ColumnName="COUNTRY_EN" />
+                <ScalarProperty Name="COUNTRY_NA" ColumnName="COUNTRY_NA" />
+                <ScalarProperty Name="COUNTRY_CO" ColumnName="COUNTRY_CO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTA_INF_REC">
+            <EntityTypeMapping TypeName="changeModel.CTA_INF_REC">
+              <MappingFragment StoreEntitySet="CTA_INF_REC">
+                <ScalarProperty Name="contents_1" ColumnName="contents_1" />
+                <ScalarProperty Name="contents_0" ColumnName="contents_0" />
+                <ScalarProperty Name="bull_flag" ColumnName="bull_flag" />
+                <ScalarProperty Name="e_cut" ColumnName="e_cut" />
+                <ScalarProperty Name="b_cut" ColumnName="b_cut" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="t_flag" ColumnName="t_flag" />
+                <ScalarProperty Name="cond_id" ColumnName="cond_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTA_MES_REC">
+            <EntityTypeMapping TypeName="changeModel.CTA_MES_REC">
+              <MappingFragment StoreEntitySet="CTA_MES_REC">
+                <ScalarProperty Name="mess" ColumnName="mess" />
+                <ScalarProperty Name="mess_level" ColumnName="mess_level" />
+                <ScalarProperty Name="mess_code" ColumnName="mess_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTA_NAM_REC">
+            <EntityTypeMapping TypeName="changeModel.CTA_NAM_REC">
+              <MappingFragment StoreEntitySet="CTA_NAM_REC">
+                <ScalarProperty Name="item_type" ColumnName="item_type" />
+                <ScalarProperty Name="item_flag" ColumnName="item_flag" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="item_code" ColumnName="item_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CURR">
+            <EntityTypeMapping TypeName="changeModel.CURR">
+              <MappingFragment StoreEntitySet="CURR">
+                <ScalarProperty Name="CURR_NAME" ColumnName="CURR_NAME" />
+                <ScalarProperty Name="CURR_SYMB" ColumnName="CURR_SYMB" />
+                <ScalarProperty Name="CURR_CODE" ColumnName="CURR_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMS">
+            <EntityTypeMapping TypeName="changeModel.CUSTOMS">
+              <MappingFragment StoreEntitySet="CUSTOMS">
+                <ScalarProperty Name="CUSTOMS_NA" ColumnName="CUSTOMS_NA" />
+                <ScalarProperty Name="CUSTOMS_FU" ColumnName="CUSTOMS_FU" />
+                <ScalarProperty Name="CUSTOMS_CO" ColumnName="CUSTOMS_CO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DISTRICT">
+            <EntityTypeMapping TypeName="changeModel.DISTRICT">
+              <MappingFragment StoreEntitySet="DISTRICT">
+                <ScalarProperty Name="DISTRICT_T" ColumnName="DISTRICT_T" />
+                <ScalarProperty Name="DISTRICT_N" ColumnName="DISTRICT_N" />
+                <ScalarProperty Name="DISTRICT_C" ColumnName="DISTRICT_C" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EXCHSOUR">
+            <EntityTypeMapping TypeName="changeModel.EXCHSOUR">
+              <MappingFragment StoreEntitySet="EXCHSOUR">
+                <ScalarProperty Name="FULL_SOURC" ColumnName="FULL_SOURC" />
+                <ScalarProperty Name="ABBR_SOURC" ColumnName="ABBR_SOURC" />
+                <ScalarProperty Name="EX_SOURCE" ColumnName="EX_SOURCE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fee_Mark">
+            <EntityTypeMapping TypeName="changeModel.Fee_Mark">
+              <MappingFragment StoreEntitySet="Fee_Mark">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GoodsAttr">
+            <EntityTypeMapping TypeName="changeModel.GoodsAttr">
+              <MappingFragment StoreEntitySet="GoodsAttr">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ALIAS3" ColumnName="ALIAS3" />
+                <ScalarProperty Name="ALIAS2" ColumnName="ALIAS2" />
+                <ScalarProperty Name="ALIAS1" ColumnName="ALIAS1" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Insur_Mark">
+            <EntityTypeMapping TypeName="changeModel.Insur_Mark">
+              <MappingFragment StoreEntitySet="Insur_Mark">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IOFCertBill">
+            <EntityTypeMapping TypeName="changeModel.IOFCertBill">
+              <MappingFragment StoreEntitySet="IOFCertBill">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ALIAS3" ColumnName="ALIAS3" />
+                <ScalarProperty Name="ALIAS2" ColumnName="ALIAS2" />
+                <ScalarProperty Name="ALIAS1" ColumnName="ALIAS1" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_TYPE">
+            <EntityTypeMapping TypeName="changeModel.LC_TYPE">
+              <MappingFragment StoreEntitySet="LC_TYPE">
+                <ScalarProperty Name="PAY_NAME" ColumnName="PAY_NAME" />
+                <ScalarProperty Name="PAY_WAY" ColumnName="PAY_WAY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LEVYMODE">
+            <EntityTypeMapping TypeName="changeModel.LEVYMODE">
+              <MappingFragment StoreEntitySet="LEVYMODE">
+                <ScalarProperty Name="DUTY_SPEC" ColumnName="DUTY_SPEC" />
+                <ScalarProperty Name="DUTY_MODE" ColumnName="DUTY_MODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LEVYTYPE">
+            <EntityTypeMapping TypeName="changeModel.LEVYTYPE">
+              <MappingFragment StoreEntitySet="LEVYTYPE">
+                <ScalarProperty Name="FULL_CUT" ColumnName="FULL_CUT" />
+                <ScalarProperty Name="ABBR_CUT" ColumnName="ABBR_CUT" />
+                <ScalarProperty Name="CUT_MODE" ColumnName="CUT_MODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LICENSED">
+            <EntityTypeMapping TypeName="changeModel.LICENSED">
+              <MappingFragment StoreEntitySet="LICENSED">
+                <ScalarProperty Name="DOCU_NAME" ColumnName="DOCU_NAME" />
+                <ScalarProperty Name="DOCU_CODE" ColumnName="DOCU_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mapping">
+            <EntityTypeMapping TypeName="changeModel.Mapping">
+              <MappingFragment StoreEntitySet="Mapping">
+                <ScalarProperty Name="chcolmnname" ColumnName="chcolmnname" />
+                <ScalarProperty Name="encolmnname" ColumnName="encolmnname" />
+                <ScalarProperty Name="chtablename" ColumnName="chtablename" />
+                <ScalarProperty Name="entablename" ColumnName="entablename" />
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Other_Mark">
+            <EntityTypeMapping TypeName="changeModel.Other_Mark">
+              <MappingFragment StoreEntitySet="Other_Mark">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAY_MODE">
+            <EntityTypeMapping TypeName="changeModel.PAY_MODE">
+              <MappingFragment StoreEntitySet="PAY_MODE">
+                <ScalarProperty Name="PAY_NAME" ColumnName="PAY_NAME" />
+                <ScalarProperty Name="PAY_CODE" ColumnName="PAY_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PORT">
+            <EntityTypeMapping TypeName="changeModel.PORT">
+              <MappingFragment StoreEntitySet="PORT">
+                <ScalarProperty Name="PORT_NAME" ColumnName="PORT_NAME" />
+                <ScalarProperty Name="PORT_CODE" ColumnName="PORT_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUATA">
+            <EntityTypeMapping TypeName="changeModel.QUATA">
+              <MappingFragment StoreEntitySet="QUATA">
+                <ScalarProperty Name="CODE_S" ColumnName="CODE_S" />
+                <ScalarProperty Name="CODE_T" ColumnName="CODE_T" />
+                <ScalarProperty Name="COUNTRY_CO" ColumnName="COUNTRY_CO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SH_REPLYERROR">
+            <EntityTypeMapping TypeName="changeModel.SH_REPLYERROR">
+              <MappingFragment StoreEntitySet="SH_REPLYERROR">
+                <ScalarProperty Name="ERR_MESS" ColumnName="ERR_MESS" />
+                <ScalarProperty Name="ERR_LEVEL" ColumnName="ERR_LEVEL" />
+                <ScalarProperty Name="ERR_CODE" ColumnName="ERR_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecDecl">
+            <EntityTypeMapping TypeName="changeModel.SpecDecl">
+              <MappingFragment StoreEntitySet="SpecDecl">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ALIAS3" ColumnName="ALIAS3" />
+                <ScalarProperty Name="ALIAS2" ColumnName="ALIAS2" />
+                <ScalarProperty Name="ALIAS1" ColumnName="ALIAS1" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableInfo">
+            <EntityTypeMapping TypeName="changeModel.TableInfo">
+              <MappingFragment StoreEntitySet="TableInfo">
+                <ScalarProperty Name="chcolmnname" ColumnName="chcolmnname" />
+                <ScalarProperty Name="encolmnname" ColumnName="encolmnname" />
+                <ScalarProperty Name="chtablename" ColumnName="chtablename" />
+                <ScalarProperty Name="entablename" ColumnName="entablename" />
+                <ScalarProperty Name="objectID" ColumnName="objectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAXTYPE">
+            <EntityTypeMapping TypeName="changeModel.TAXTYPE">
+              <MappingFragment StoreEntitySet="TAXTYPE">
+                <ScalarProperty Name="TAX_SPEC" ColumnName="TAX_SPEC" />
+                <ScalarProperty Name="TAX_CODE" ColumnName="TAX_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRADE">
+            <EntityTypeMapping TypeName="changeModel.TRADE">
+              <MappingFragment StoreEntitySet="TRADE">
+                <ScalarProperty Name="FULL_TRADE" ColumnName="FULL_TRADE" />
+                <ScalarProperty Name="ABBR_TRADE" ColumnName="ABBR_TRADE" />
+                <ScalarProperty Name="TRADE_MODE" ColumnName="TRADE_MODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANS_FLAG">
+            <EntityTypeMapping TypeName="changeModel.TRANS_FLAG">
+              <MappingFragment StoreEntitySet="TRANS_FLAG">
+                <ScalarProperty Name="TRANS_FLAG_NAME" ColumnName="TRANS_FLAG_NAME" />
+                <ScalarProperty Name="TRANS_FLAG_CO" ColumnName="TRANS_FLAG_CO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSAC">
+            <EntityTypeMapping TypeName="changeModel.TRANSAC">
+              <MappingFragment StoreEntitySet="TRANSAC">
+                <ScalarProperty Name="TRANS_SPEC" ColumnName="TRANS_SPEC" />
+                <ScalarProperty Name="TRANS_MODE" ColumnName="TRANS_MODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSF">
+            <EntityTypeMapping TypeName="changeModel.TRANSF">
+              <MappingFragment StoreEntitySet="TRANSF">
+                <ScalarProperty Name="TRAF_SPEC" ColumnName="TRAF_SPEC" />
+                <ScalarProperty Name="TRAF_CODE" ColumnName="TRAF_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UNIT">
+            <EntityTypeMapping TypeName="changeModel.UNIT">
+              <MappingFragment StoreEntitySet="UNIT">
+                <ScalarProperty Name="CONV_RATIO" ColumnName="CONV_RATIO" />
+                <ScalarProperty Name="CONV_CODE" ColumnName="CONV_CODE" />
+                <ScalarProperty Name="UNIT_NAME" ColumnName="UNIT_NAME" />
+                <ScalarProperty Name="UNIT_CODE" ColumnName="UNIT_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsePurpose">
+            <EntityTypeMapping TypeName="changeModel.UsePurpose">
+              <MappingFragment StoreEntitySet="UsePurpose">
+                <ScalarProperty Name="ALIAS9" ColumnName="ALIAS9" />
+                <ScalarProperty Name="ALIAS8" ColumnName="ALIAS8" />
+                <ScalarProperty Name="ALIAS7" ColumnName="ALIAS7" />
+                <ScalarProperty Name="ALIAS6" ColumnName="ALIAS6" />
+                <ScalarProperty Name="ALIAS5" ColumnName="ALIAS5" />
+                <ScalarProperty Name="ALIAS4" ColumnName="ALIAS4" />
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ALIAS3" ColumnName="ALIAS3" />
+                <ScalarProperty Name="ALIAS2" ColumnName="ALIAS2" />
+                <ScalarProperty Name="ALIAS1" ColumnName="ALIAS1" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_TO">
+            <EntityTypeMapping TypeName="changeModel.USER_TO">
+              <MappingFragment StoreEntitySet="USER_TO">
+                <ScalarProperty Name="USE_TO_NAM" ColumnName="USE_TO_NAM" />
+                <ScalarProperty Name="USE_TO_COD" ColumnName="USE_TO_COD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorldFirstDistrict">
+            <EntityTypeMapping TypeName="changeModel.WorldFirstDistrict">
+              <MappingFragment StoreEntitySet="WorldFirstDistrict">
+                <ScalarProperty Name="OTHER_FLAG" ColumnName="OTHER_FLAG" />
+                <ScalarProperty Name="FMK_ARCHIVE_FLAG" ColumnName="FMK_ARCHIVE_FLAG" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="LEAFFLAG" ColumnName="LEAFFLAG" />
+                <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="PARENTCODE" ColumnName="PARENTCODE" />
+                <ScalarProperty Name="OLDCNAME" ColumnName="OLDCNAME" />
+                <ScalarProperty Name="OLDCODE" ColumnName="OLDCODE" />
+                <ScalarProperty Name="CIQ" ColumnName="CIQ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+                <ScalarProperty Name="ISO3" ColumnName="ISO3" />
+                <ScalarProperty Name="ISO2" ColumnName="ISO2" />
+                <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+                <ScalarProperty Name="INDEXID" ColumnName="INDEXID" />
+                <ScalarProperty Name="CCM_UUID" ColumnName="CCM_UUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WRAP_TYPE">
+            <EntityTypeMapping TypeName="changeModel.WRAP_TYPE">
+              <MappingFragment StoreEntitySet="WRAP_TYPE">
+                <ScalarProperty Name="WRAP_NAME" ColumnName="WRAP_NAME" />
+                <ScalarProperty Name="WRAP_CODE" ColumnName="WRAP_CODE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

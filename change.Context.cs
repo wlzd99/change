@@ -73,5 +73,44 @@ namespace change
         public virtual DbSet<sendAgent_r> sendAgent_r { get; set; }
         public virtual DbSet<报关单随附单证> 报关单随附单证 { get; set; }
         public virtual DbSet<nc_getEdiNo> nc_getEdiNo { get; set; }
+        public virtual DbSet<CHARACTERISTICCODE> CHARACTERISTICCODE { get; set; }
+        public virtual DbSet<ChinaRegionalism> ChinaRegionalism { get; set; }
+        public virtual DbSet<CO_TYPE> CO_TYPE { get; set; }
+        public virtual DbSet<CONTA_MODEL> CONTA_MODEL { get; set; }
+        public virtual DbSet<CorrelationReason> CorrelationReason { get; set; }
+        public virtual DbSet<COUNTRY> COUNTRY { get; set; }
+        public virtual DbSet<CTA_INF_REC> CTA_INF_REC { get; set; }
+        public virtual DbSet<CTA_MES_REC> CTA_MES_REC { get; set; }
+        public virtual DbSet<CTA_NAM_REC> CTA_NAM_REC { get; set; }
+        public virtual DbSet<CURR> CURR { get; set; }
+        public virtual DbSet<CUSTOMS> CUSTOMS { get; set; }
+        public virtual DbSet<DISTRICT> DISTRICT { get; set; }
+        public virtual DbSet<EXCHSOUR> EXCHSOUR { get; set; }
+        public virtual DbSet<Fee_Mark> Fee_Mark { get; set; }
+        public virtual DbSet<GoodsAttr> GoodsAttr { get; set; }
+        public virtual DbSet<Insur_Mark> Insur_Mark { get; set; }
+        public virtual DbSet<IOFCertBill> IOFCertBill { get; set; }
+        public virtual DbSet<LC_TYPE> LC_TYPE { get; set; }
+        public virtual DbSet<LEVYMODE> LEVYMODE { get; set; }
+        public virtual DbSet<LEVYTYPE> LEVYTYPE { get; set; }
+        public virtual DbSet<LICENSED> LICENSED { get; set; }
+        public virtual DbSet<Mapping> Mapping { get; set; }
+        public virtual DbSet<Other_Mark> Other_Mark { get; set; }
+        public virtual DbSet<PAY_MODE> PAY_MODE { get; set; }
+        public virtual DbSet<PORT> PORT { get; set; }
+        public virtual DbSet<QUATA> QUATA { get; set; }
+        public virtual DbSet<SH_REPLYERROR> SH_REPLYERROR { get; set; }
+        public virtual DbSet<SpecDecl> SpecDecl { get; set; }
+        public virtual DbSet<TableInfo> TableInfo { get; set; }
+        public virtual DbSet<TAXTYPE> TAXTYPE { get; set; }
+        public virtual DbSet<TRADE> TRADE { get; set; }
+        public virtual DbSet<TRANS_FLAG> TRANS_FLAG { get; set; }
+        public virtual DbSet<TRANSAC> TRANSAC { get; set; }
+        public virtual DbSet<TRANSF> TRANSF { get; set; }
+        public virtual DbSet<UNIT> UNIT { get; set; }
+        public virtual DbSet<UsePurpose> UsePurpose { get; set; }
+        public virtual DbSet<USER_TO> USER_TO { get; set; }
+        public virtual DbSet<WorldFirstDistrict> WorldFirstDistrict { get; set; }
+        public virtual DbSet<WRAP_TYPE> WRAP_TYPE { get; set; }
     }
 }

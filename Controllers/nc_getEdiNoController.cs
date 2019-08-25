@@ -150,7 +150,7 @@ namespace change.Controllers
                 {
                     httpWebRequest.Abort();
                 }
-                return View(nc_getEdiNo);
+                return RedirectToAction("edit");
             }
             else if (action == "解码")
             {
@@ -161,12 +161,12 @@ namespace change.Controllers
                     db.Entry(nc_getEdiNo).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-                return View(nc_getEdiNo);
+                return RedirectToAction("edit");
                 //
             }
             else
             {
-                return View(nc_getEdiNo);
+                return RedirectToAction("edit");
                 //
             }
 

@@ -1,0 +1,19 @@
+{
+  "msgType": "CUS_RESULT",
+  "data": {
+    "ediNo": "EDI单据编号",
+    "preEntryId": "预录入编号",
+    "userName": "海关帐号",
+    "loginTradecode": "录入企业代码",
+    "seqNo": "数据中心统一编号",
+    "noticeDate": "通知时间",
+    "channel": "处理结果",
+    "note": "审核备注",
+    "declPort": "申报口岸",
+    "iEDate": "进出口日期",
+    "dDate": "申报日期",
+    "fileName": "回执文件名",
+    "cusCiqNo": "关检关联号"
+  }
+}
+

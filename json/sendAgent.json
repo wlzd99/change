@@ -1,0 +1,37 @@
+{
+  "data": {
+    " T_SWGD_AGENT_LIST ": {
+      "ediNo": "",
+      "copCusCode": "",
+      "gname": "",
+      "codeTS": "",
+      "declTotal": "",
+      "iEDate": "",
+      "listNo": "",
+      "tradeMode": "",
+      "curr": "",
+      "oriCountry": "",
+      "otherNote": "",
+      "consignIcCode": "",
+      "consignIcName": "",
+      "consignPhone": "",
+      "consignDate": "",
+      "entryId": "",
+      "cusCode": "",
+      "decEntryId": "",
+      "receiveDate": "",
+      "edocCode": "",
+      "otherRecInfo": "",
+      "declarePrice": "",
+      "promiseNote": "",
+      "declIcCode": "",
+      "declIcName": "",
+      "declTele": "",
+      "note": "",
+      "payerCode": "",
+      "tradeCode": "",
+      "agentCode": "",
+      "userName": ""
+    }
+  }
+}

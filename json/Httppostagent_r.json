@@ -1,0 +1,10 @@
+{
+  "msgType": "AGENT_RESULT",
+  "data": {
+    "ediNo": "EDI单据编号",
+    "conSignNo": "委托协议号",
+    "responseCode": "响应代码",
+    "responseNotes": "响应信息",
+    "dataResult": "通知时间"
+  }
+}

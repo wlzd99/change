@@ -53,6 +53,45 @@
         <EntityTypeShape EntityType="changeModel.sendAgent_r" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="changeModel.报关单随附单证" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="changeModel.nc_getEdiNo" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="changeModel.CHARACTERISTICCODE" Width="1.5" PointX="3.75" PointY="21.75" />
+        <EntityTypeShape EntityType="changeModel.ChinaRegionalism" Width="1.5" PointX="21.75" PointY="20.75" />
+        <EntityTypeShape EntityType="changeModel.CO_TYPE" Width="1.5" PointX="23.75" PointY="0.75" />
+        <EntityTypeShape EntityType="changeModel.CONTA_MODEL" Width="1.5" PointX="23.75" PointY="3.75" />
+        <EntityTypeShape EntityType="changeModel.CorrelationReason" Width="1.5" PointX="23.75" PointY="6.75" />
+        <EntityTypeShape EntityType="changeModel.COUNTRY" Width="1.5" PointX="23.75" PointY="11.75" />
+        <EntityTypeShape EntityType="changeModel.CTA_INF_REC" Width="1.5" PointX="13.75" PointY="23.75" />
+        <EntityTypeShape EntityType="changeModel.CTA_MES_REC" Width="1.5" PointX="23.75" PointY="14.75" />
+        <EntityTypeShape EntityType="changeModel.CTA_NAM_REC" Width="1.5" PointX="23.75" PointY="17.75" />
+        <EntityTypeShape EntityType="changeModel.CURR" Width="1.5" PointX="23.75" PointY="20.75" />
+        <EntityTypeShape EntityType="changeModel.CUSTOMS" Width="1.5" PointX="23.75" PointY="23.75" />
+        <EntityTypeShape EntityType="changeModel.DISTRICT" Width="1.5" PointX="3.75" PointY="24.75" />
+        <EntityTypeShape EntityType="changeModel.EXCHSOUR" Width="1.5" PointX="9.75" PointY="24.75" />
+        <EntityTypeShape EntityType="changeModel.Fee_Mark" Width="1.5" PointX="19.75" PointY="24.75" />
+        <EntityTypeShape EntityType="changeModel.GoodsAttr" Width="1.5" PointX="25.75" PointY="0.75" />
+        <EntityTypeShape EntityType="changeModel.Insur_Mark" Width="1.5" PointX="0.75" PointY="25.75" />
+        <EntityTypeShape EntityType="changeModel.IOFCertBill" Width="1.5" PointX="25.75" PointY="5.75" />
+        <EntityTypeShape EntityType="changeModel.LC_TYPE" Width="1.5" PointX="25.75" PointY="10.75" />
+        <EntityTypeShape EntityType="changeModel.LEVYMODE" Width="1.5" PointX="25.75" PointY="13.75" />
+        <EntityTypeShape EntityType="changeModel.LEVYTYPE" Width="1.5" PointX="25.75" PointY="16.75" />
+        <EntityTypeShape EntityType="changeModel.LICENSED" Width="1.5" PointX="25.75" PointY="19.75" />
+        <EntityTypeShape EntityType="changeModel.Mapping" Width="1.5" PointX="25.75" PointY="22.75" />
+        <EntityTypeShape EntityType="changeModel.Other_Mark" Width="1.5" PointX="25.75" PointY="25.75" />
+        <EntityTypeShape EntityType="changeModel.PAY_MODE" Width="1.5" PointX="15.75" PointY="26.75" />
+        <EntityTypeShape EntityType="changeModel.PORT" Width="1.5" PointX="21.75" PointY="26.75" />
+        <EntityTypeShape EntityType="changeModel.QUATA" Width="1.5" PointX="27.75" PointY="0.75" />
+        <EntityTypeShape EntityType="changeModel.SH_REPLYERROR" Width="1.5" PointX="2.75" PointY="27.75" />
+        <EntityTypeShape EntityType="changeModel.SpecDecl" Width="1.5" PointX="27.75" PointY="3.75" />
+        <EntityTypeShape EntityType="changeModel.TableInfo" Width="1.5" PointX="27.75" PointY="8.75" />
+        <EntityTypeShape EntityType="changeModel.TAXTYPE" Width="1.5" PointX="9.75" PointY="27.75" />
+        <EntityTypeShape EntityType="changeModel.TRADE" Width="1.5" PointX="27.75" PointY="11.75" />
+        <EntityTypeShape EntityType="changeModel.TRANS_FLAG" Width="1.5" PointX="11.75" PointY="27.75" />
+        <EntityTypeShape EntityType="changeModel.TRANSAC" Width="1.5" PointX="27.75" PointY="14.75" />
+        <EntityTypeShape EntityType="changeModel.TRANSF" Width="1.5" PointX="27.75" PointY="17.75" />
+        <EntityTypeShape EntityType="changeModel.UNIT" Width="1.5" PointX="17.75" PointY="27.75" />
+        <EntityTypeShape EntityType="changeModel.UsePurpose" Width="1.5" PointX="27.75" PointY="20.75" />
+        <EntityTypeShape EntityType="changeModel.USER_TO" Width="1.5" PointX="27.75" PointY="26.75" />
+        <EntityTypeShape EntityType="changeModel.WorldFirstDistrict" Width="1.5" PointX="23.75" PointY="28.75" />
+        <EntityTypeShape EntityType="changeModel.WRAP_TYPE" Width="1.5" PointX="29.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

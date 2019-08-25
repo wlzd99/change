@@ -1,0 +1,30 @@
+2019-08-26 00:02:21,021 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: XW8rpd9OFw/hfYhda/D+bDnJMBQqVp/bqELoagFwGrI1MmIyZTExMi0xZGNlLTQ1
+
+
+2019-08-26 00:02:21,036 [6] INFO  ValuesController - 发送信息：：：{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+2019-08-26 00:24:01,259 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: Ty81NZVxg7hwy4n4UsdCjnRxjuSFfKC2r9s5VQgYwtg0NDZjMmE2Mi1jNWI3LTQy
+
+
+2019-08-26 00:24:01,272 [6] INFO  ValuesController - 发送信息：：：{"data":"refz8aX7KtRyQtkqxU9ukmSV9U6H9DLS05pbW44maKAcsL1Ir93cTYUAPBP4tSqpk1Udp+hLVsC7Rlqaad014/RqNMOnT5saiV/o1Nk4Cro+z4rQRUVQyslNw6nCy+n9"}
+2019-08-26 00:27:47,006 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: bMXYvKsl4RLeTghGaYdl2su37X0df9+h7cilT5k9pYZjMmNkZTNhYy1kZDhmLTRi
+
+
+2019-08-26 00:27:47,006 [6] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}

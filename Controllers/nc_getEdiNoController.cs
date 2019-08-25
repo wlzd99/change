@@ -11,6 +11,8 @@ using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Zip;
 using System.Text;
 using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace change.Controllers
 {
@@ -99,6 +101,33 @@ namespace change.Controllers
             }
             else if (action == "测试")
             {
+                string jsonfile = "D:\\殷勇\\change\\json\\getEdiNo_s.json";
+                using (System.IO.StreamReader file = System.IO.File.OpenText(jsonfile))
+                {
+                    using (Newtonsoft.Json.JsonTextReader reader = new Newtonsoft.Json.JsonTextReader(file))
+                    {
+                        try
+                        {
+                            string json = System.IO.File.ReadAllText(jsonfile);
+                            json = json.Replace("\r\n", ""); ;
+                            json = json.Replace(" ", "");
+                            StringReader sr = new StringReader(json);
+                            Models.getEdiNo_sJsonRoot t = JsonConvert.DeserializeObject<Models.getEdiNo_sJsonRoot>(json);
+                            //JsonSerializer serializer = new JsonSerializer();
+                            //object o = serializer.Deserialize(new JsonTextReader(sr), typeof(Models.getEdiNo_sJsonRoot));
+                            //Models.getEdiNo_sJsonData t = o as Models.getEdiNo_sJsonData;
+                            string json1= JsonConvert.SerializeObject(t.data);
+                            nc_getEdiNo.txtData = json1;
+                        }
+                        catch (Exception ex)
+                        {
+                            log.Error(ex.ToString());
+                        }
+                    }
+                }
+
+
+
                 HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(nc_getEdiNo.txtAdress.Trim());
                 httpWebRequest.ProtocolVersion = HttpVersion.Version11;
                 httpWebRequest.Timeout = 300 * 1000;

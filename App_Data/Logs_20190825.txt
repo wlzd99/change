@@ -1,0 +1,115 @@
+2019-08-25 22:38:47,637 [5] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: uiM1z8oUW82Sdi89qmCMSn6qFyyOwLnucGBD+aHZzfo4MTJjMzAzYS00MGY2LTQ2
+
+
+2019-08-25 22:38:47,653 [5] INFO  ValuesController - ������Ϣ������{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+2019-08-25 23:13:11,973 [6] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: 9QqCL+9TL3Q5jZG+NjUjfVj+N8pCuQZvDqw1QrICKI1iZTY3ZDY4NC03ZjVkLTRk
+
+
+2019-08-25 23:13:11,991 [6] INFO  ValuesController - ������Ϣ������{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+2019-08-25 23:23:32,545 [6] ERROR ValuesController - Newtonsoft.Json.JsonReaderException: Invalid property identifier character: \. Path '', line 1, position 1.
+   �� Newtonsoft.Json.JsonTextReader.ParseProperty()
+   �� Newtonsoft.Json.JsonTextReader.ParseObject()
+   �� Newtonsoft.Json.JsonTextReader.Read()
+   �� Newtonsoft.Json.JsonReader.ReadAndAssert()
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   �� Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   �� Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   �� change.Controllers.nc_getEdiNoController.Edit(nc_getEdiNo nc_getEdiNo, String action) λ�� D:\����\change\Controllers\nc_getEdiNoController.cs:�к� 116
+2019-08-25 23:24:12,322 [6] ERROR ValuesController - Newtonsoft.Json.JsonReaderException: Invalid property identifier character: \. Path '', line 1, position 1.
+   �� Newtonsoft.Json.JsonTextReader.ParseProperty()
+   �� Newtonsoft.Json.JsonTextReader.ParseObject()
+   �� Newtonsoft.Json.JsonTextReader.Read()
+   �� Newtonsoft.Json.JsonReader.ReadAndAssert()
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   �� Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   �� Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   �� change.Controllers.nc_getEdiNoController.Edit(nc_getEdiNo nc_getEdiNo, String action) λ�� D:\����\change\Controllers\nc_getEdiNoController.cs:�к� 116
+2019-08-25 23:24:12,885 [6] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: O3cD/aE3ipoPDOHMwLNboKVigrRus8uXSnxyJBlkAAA5MzE2OTM5ZC03OWUyLTRh
+
+
+2019-08-25 23:24:12,885 [6] INFO  ValuesController - ������Ϣ������{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-25 23:29:43,910 [5] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: GruZQVtZFn6hvLJaIpJT12DS7nBQD4vsAsdAtAF1o+YyZmNhNmYxMC1lYmYwLTQ5
+
+
+2019-08-25 23:29:43,924 [5] INFO  ValuesController - ������Ϣ������{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-25 23:31:29,761 [6] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: EecikvNPREDW3EOHqfQMEQbbf8PyNDMt+Y/C3I1ve2RlMDJjYjUwNy1iNjNmLTQ3
+
+
+2019-08-25 23:31:29,761 [6] INFO  ValuesController - ������Ϣ������{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+2019-08-25 23:37:23,427 [6] ERROR ValuesController - Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: K. Path 'data.userName', line 1, position 66.
+   �� Newtonsoft.Json.JsonTextReader.ParseValue()
+   �� Newtonsoft.Json.JsonTextReader.Read()
+   �� Newtonsoft.Json.JsonReader.Skip()
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetExtensionData(JsonObjectContract contract, JsonProperty member, JsonReader reader, String memberName, Object o)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   �� Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   �� Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   �� Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   �� change.Controllers.nc_getEdiNoController.Edit(nc_getEdiNo nc_getEdiNo, String action) λ�� D:\����\change\Controllers\nc_getEdiNoController.cs:�к� 117
+2019-08-25 23:38:20,039 [6] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: oWSBF5lltoyTXL9JdzvzM1FxzTHXs7EVENP3sOaO63owNTQyNDk3MC00NzI1LTRl
+
+
+2019-08-25 23:38:20,040 [6] INFO  ValuesController - ������Ϣ������{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-25 23:43:13,678 [6] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: eXaAt93PMrVMKF0ymNNLDqSfDIdOw/SZqncKxqONTTkyMjUzMzU1Yi02MWFmLTRk
+
+
+2019-08-25 23:43:13,694 [6] INFO  ValuesController - ������Ϣ������{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+2019-08-25 23:47:22,792 [7] INFO  ValuesController - ����ͷ��Ϣ������User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: wa5LgRpXCit8Wx2ZEtiiOTjeRSmUiX/l5aglwNmrzWBmNmQzMDNiNC0zNTA2LTQz
+
+
+2019-08-25 23:47:22,792 [7] INFO  ValuesController - ������Ϣ������{"data":"PmnJ4L5d09vGzde3BVudOc26BWpj/wzFDbSsouowU7W9V+PuxZgSevThZddYguUw"}
+"{\"data\":{\"customsCode\":\"2212\",\"agentCode\":\"1108919038\",\"entryType\":\"8\",\"userName\":\"KSHJ\"}}"

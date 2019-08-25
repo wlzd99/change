@@ -30,6 +30,6 @@ namespace change.Models
         /// <summary>
         /// 
         /// </summary>
-        public getEdiNo_sJsonData getEdiNo_sJsondata { get; set; }
+        public getEdiNo_sJsonData data { get; set; }
     }
 }

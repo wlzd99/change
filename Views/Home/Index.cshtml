@@ -2,108 +2,109 @@
 @{
     ViewBag.Title = "Home Page";
 }
-    <script type="text/javascript" src="../Scripts/jquery-3.4.1.js"></script>
+
+<script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="~/Scripts/vendor/jquery.ui.widget.js"></script>
+@*<script type="text/javascript" src="~/Scripts/jQuery.FileUpload/jquery.iframe-transport.js"></script>*@
+<script type="text/javascript" src="~/Scripts/jQuery.FileUpload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="~/Scripts/jQuery.FileUpload/jquery.fileupload-process.js"></script>
+<script type="text/javascript" src="~/Scripts/jQuery.FileUpload/jquery.fileupload-validate.js"></script>
+<link href="~/Content/jQuery.FileUpload/css/jquery.fileupload-ui.css" rel="stylesheet" />
 
 <ul id="menu">
     @Html.ActionLink("主页", "Index", "Home")                     @Html.ActionLink("nc_getEdiNo", "index", "nc_getEdiNo")                     @Html.ActionLink("联系方式", "Contact", "Home")                 @Html.ActionLink("关于", "About", "Home")
 </ul>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-    </div>
-</div>
+
 <style type="text/css">
-    .field-validation-error {
-        color: red;
+
+    .bar {
+        height: 18px;
+        background: green;
     }
 </style>
-<form id="uploadFileSub" action="/Home/UploadFile" method="post" enctype="multipart/form-data">
-    <fieldset>
-        <legend></legend>
-        <ul class="lifile">
-            <li>
-                @Html.LabelFor(m => m.BlogName)<br />
-                @Html.TextBoxFor(m => m.BlogName, new { maxlength = 50 })
-                @Html.ValidationMessageFor(m => m.BlogName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.BlogAddress)<br />
-                @Html.TextBoxFor(m => m.BlogAddress, new { maxlength = 200 })
-                @Html.ValidationMessageFor(m => m.BlogAddress)<br />
-            </li>
-            <li>
-                @Html.LabelFor(m => m.BlogPhoto)
-                @Html.TextBoxFor(m => m.BlogPhoto, new { type = "file" })
-                @Html.ValidationMessageFor(m => m.BlogPhoto)
-                <span id="warning" style="color:red;font-size:large;"></span>
-            </li>
-            <li>
-                <input type="submit" value="提交" />
-            </li>
-        </ul>
 
-    </fieldset>
-</form>
+<h2>用jQuery-File-Upload上传Excel文件(ASP.NET MVC)</h2>
+<input id="fileupload" type="file" name="multiFiles" multiple />
+<button id="startBtn" style="display:none;">上传</button>
+<div id="progress">
+    <div class="bar" style="width: 0%;"></div>
+</div>
+<br />
+<table border="1" id="tab1"></table>
 <script>
-    $("#BlogPhoto").change(function () {
-        var file = getNameFromPath($(this).val());
-        if (file != null) {
-            var errors = $(document).find(".field-validation-error");
-            $.each(errors, function (k, v) {
-                if ($(v).attr("data-valmsg-for") === "BlogPhoto") {
-                    $(v).hide();
+    $(function () {
+        $('#fileupload').fileupload({
+            url: "/Home/UploadFiles",
+            dataType: 'json',
+            replaceFileInput: false,//显示已选择文件文件名(必须)
+            progressall: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $('#progress .bar').css('width', progress + '%');
+            },
+            add: function (e, data) {
+                //判断文件类型，此例限制为：Excel文件
+                var fileType = data.files[0].name.split('.').pop();
+                var acceptFileTypes = /xls|xlsx$/i;
+                if (!acceptFileTypes.test(fileType)) {
+                    $("#startBtn").hide();//隐藏上传按钮
+                    alert("不支持的文件类型，仅支持EXCEL文件");
+                    return;
                 }
-            });
-            var extension = file.substr((file.lastIndexOf('.') + 1));
-            switch (extension) {
-                case 'jpg':
-                case 'png':
-                case 'gif':
-                case 'pdf':
-                    fileTypeBool = false;
-                    break;
-                default:
-                    fileTypeBool = true;
-            }
-        }
-        if (fileTypeBool) {
-            $("#warning").html("只能上传扩展名为jpg,png,gif,pdf的文件！");
-            return false;
-        }
-        else {
-            var size = GetFileSize('BlogPhoto');
-            if (size > 4) {
-                fileSizeBool = true;
-                $("#warning").html("上传文件已经超过4兆！");
-            } else {
-                fileSizeBool = false;
-            }
-        }
-    });
-    function GetFileSize(fileid) {
-        var fileSize = 0;
-        fileSize = $("#" + fileid)[0].files[0].size;
-        fileSize = fileSize / 1048576;
-        return fileSize;
-    };
-    function getNameFromPath(strFilepath) {
-        var objRE = new RegExp(/([^\/\\]+)$/);
-        var strName = objRE.exec(strFilepath);
-        if (strName == null) {
-            return null;
-        }
-        else {
-            return strName[0];
-        }
-    };
-    $("#uploadFileSub").submit(function () {
-        $("input[type='text']").each(function (k, v) {
-            if ($(v).length) {
-                $(v).siblings("span").hide();
-            }
+                //判断文件大小，此例限制为：1mb：
+                var size = data.files[0].size;
+                size = (size / 1024).toFixed(2);//文件大小单位kb
+                var maxFileSize = 1024;//1mb=1024kb
+                if (size > maxFileSize) {
+                    $("#startBtn").hide();//隐藏上传按钮
+                    alert("文件大小：" + size + "KB,超过最大限制：" + maxFileSize + "KB");
+                    return;
+                }
+                $("#startBtn").show();//显示上传按钮
+                //点击上传按钮开始上传
+                data.context = $('#startBtn').click(function () {
+                    data.context = $('<p/>').text('Uploading...').replaceAll($(this));
+                    data.submit();
+                });
+            },
+            done: function (e, data) {
+                data.context = $('<p/>').text("文件上传成功!").replaceAll($(this));
+
+                $("#tab1").empty();
+                $('#tab1').append("<tr><th>进度</th><th>课程</th><th>说明</th></tr>");
+                $.ajax({
+                    type: "GET",
+                    url: "/Home/ReadFile",
+                    data: {},
+                    dataType: "json",
+                    success: function (result) {
+                        var html = '';
+                        for (var i = 0; i < result.length; i++) {
+                            html += '<tr>';
+                            html += '<td>' + result[i].no + '</td>';
+                            html += '<td>' + result[i].title + '</td>';
+                            html += '<td>' + result[i].note + '</td>';
+                            html += '</tr>';
+                        }
+                        $('#tab1').append(html);
+                    }
+                });
+
+            },
+            change: function (e, data) {
+                if (data.files.length > 1) {
+                    $("#startBtn").hide();//隐藏上传按钮
+                    alert("只能选择1个文件");
+                    return false;
+                }
+            },
+            drop: function (e, data) {
+                if (data.files.length > 1) {
+                    $("#startBtn").hide();//隐藏上传按钮
+                    alert("只能选择1个文件");
+                    return false;
+                }
+            },
         });
-        if (fileTypeBool || fileSizeBool) {
-            return false;
-        }
     });
+
 </script>

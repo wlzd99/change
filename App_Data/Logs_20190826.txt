@@ -28,3 +28,27 @@ X-SWGD-Sign: bMXYvKsl4RLeTghGaYdl2su37X0df9+h7cilT5k9pYZjMmNkZTNhYy1kZDhmLTRi
 
 
 2019-08-26 00:27:47,006 [6] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-26 01:05:44,458 [5] ERROR ValuesController - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 change.Controllers.nc_getEdiNoController.Edit(nc_getEdiNo nc_getEdiNo, String action) 位置 D:\殷勇\change\Controllers\nc_getEdiNoController.cs:行号 117
+2019-08-26 01:05:45,010 [5] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: 2ZqbXLKhIgxBbj5Oc4Pf3Nz80FOv+JFdcuY3ZewwwEUxMzI0ZTU3NC04NmIxLTRh
+
+
+2019-08-26 01:05:45,011 [5] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}
+2019-08-26 01:05:59,545 [6] ERROR ValuesController - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 change.Controllers.nc_getEdiNoController.Edit(nc_getEdiNo nc_getEdiNo, String action) 位置 D:\殷勇\change\Controllers\nc_getEdiNoController.cs:行号 117
+2019-08-26 01:08:25,474 [6] INFO  ValuesController - 发送头信息：：：User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Content-Type: application/json;charset=utf8
+Accept-Encoding: gzip,deflate
+X-SWGD-Sender: KSHJ
+X-SWGD-Receiver: SWGD
+X-SWGD-PublicKey: GOSnxsYfjOhfniSWVReYQP7mrQ9R71WFNz8NDYEzSzc=
+X-SWGD-Sign: 5BanZxxX+5EEYrcmyzu8blh9vinnWc0vtpZ4HPcSIZ4xYjA2YTQyYi0xMmJkLTRi
+
+
+2019-08-26 01:08:25,474 [6] INFO  ValuesController - 发送信息：：：{"data":"3yScxgcrg7y0Vh/TfIeNCkRtfD1yn7EbJM7y7huUaXGez8NWuQoBQvgmiJqRKxFembcYHBNmcNwKvO1q4gfcQevphgy77zU5Bc9M4R5dPlXxtsh6HpY0qBeomsMLesBR"}

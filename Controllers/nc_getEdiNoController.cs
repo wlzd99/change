@@ -108,15 +108,24 @@ namespace change.Controllers
                     {
                         try
                         {
-                            string json = System.IO.File.ReadAllText(jsonfile);
-                            json = json.Replace("\r\n", ""); ;
-                            json = json.Replace(" ", "");
-                            StringReader sr = new StringReader(json);
-                            Models.getEdiNo_sJsonRoot t = JsonConvert.DeserializeObject<Models.getEdiNo_sJsonRoot>(json);
+                            //string json = System.IO.File.ReadAllText(jsonfile);
+                            //json = json.Replace("\r\n", ""); ;
+                            //json = json.Replace(" ", "");
+                            //StringReader sr = new StringReader(json);
+
+                            //反序列化 数据赋值到实体类
+                            //Models.getEdiNo_sJsonRoot t = JsonConvert.DeserializeObject<Models.getEdiNo_sJsonRoot>(json);
+                            Models.getEdiNo_sJsonRoot t = new Models.getEdiNo_sJsonRoot();
+                            t.data = new Models.getEdiNo_sJsonData();
+                            t.data.customsCode = "2212";
+                            t.data.agentCode = "1108919038";
+                            t.data.entryType = "8";
+                            t.data.userName = "KSHJ";
                             //JsonSerializer serializer = new JsonSerializer();
                             //object o = serializer.Deserialize(new JsonTextReader(sr), typeof(Models.getEdiNo_sJsonRoot));
                             //Models.getEdiNo_sJsonData t = o as Models.getEdiNo_sJsonData;
-                            string json1= JsonConvert.SerializeObject(t.data);
+                            //序列化 实体类生成数据
+                            string json1 = JsonConvert.SerializeObject(t.data);
                             nc_getEdiNo.txtData = json1;
                         }
                         catch (Exception ex)

@@ -450,7 +450,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CheckJsonDataJson.cs" />
     <Compile Include="Models\BlogModel.cs" />
+    <Compile Include="Models\CheckJsonData_r.cs" />
+    <Compile Include="Models\downloadDocumentsAttachedByCheck_rJson.cs" />
     <Compile Include="Models\downloadDocumentsAttachedByCheck_sJson.cs" />
+    <Compile Include="Models\downloadPDF_rJson.cs" />
+    <Compile Include="Models\downloadPDF_sJson.cs" />
+    <Compile Include="Models\getDocumentsAttachedReplyInfo_rJson.cs" />
     <Compile Include="Models\getDocumentsAttachedReplyInfo_sJson.cs" />
     <Compile Include="Models\getEdiNo_rJson.cs" />
     <Compile Include="Models\getEdiNo_sJson.cs" />
@@ -459,9 +464,14 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\queryFormResultJson.cs" />
+    <Compile Include="Models\queryFormResult_rJson.cs" />
     <Compile Include="Models\sendAgentJson.cs" />
+    <Compile Include="Models\sendAgent_rJson.cs" />
     <Compile Include="Models\sendCusFileJson.cs" />
+    <Compile Include="Models\sendCusFile_rJson.cs" />
+    <Compile Include="Models\uploadDocumentsAttached_rJson.cs" />
     <Compile Include="Models\uploadDocumentsAttached_sJson.cs" />
+    <Compile Include="Models\uploadFileForSW_rJson.cs" />
     <Compile Include="Models\uploadFileForSW_sJson.cs" />
     <Compile Include="nc_getEdiNo.cs">
       <DependentUpon>change.tt</DependentUpon>
@@ -748,6 +758,16 @@
     <Content Include="json\uploadDocumentsAttached_s.json" />
     <Content Include="json\uploadFileForSW_s.json" />
     <Content Include="json\getEdiNo_r.json" />
+    <Content Include="json\sendCusFile_r.json" />
+    <Content Include="json\sendAgent_r.json" />
+    <Content Include="json\uploadFileForSW_r.json" />
+    <Content Include="json\uploadDocumentsAttached_r.json" />
+    <Content Include="json\getDocumentsAttachedReplyInfo_r.json" />
+    <Content Include="json\downloadDocumentsAttachedByCheck_r.json" />
+    <Content Include="json\downloadPDF_r.json" />
+    <Content Include="json\CheckJsonData_r.json" />
+    <Content Include="json\queryFormResult_r.json" />
+    <Content Include="json\downloadPDF_s.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

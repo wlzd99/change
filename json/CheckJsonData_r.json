@@ -1,0 +1,17 @@
+{
+  "flag": "T",
+  "errorCode": "",
+  "errorInfo": "",
+  "data": {
+    "ErrorList": [
+      {
+        "ErrorCode": "",
+        "ErrorMsg": "错误信息",
+        "Group": "错误的节点名",
+        "Line": 0,
+        "ClientId": "错误的字段名称"
+      }
+    ],
+    "CheckSucc": "1" // 1成功，0失败  //"data数据加密，需解密"
+  }
+ }
